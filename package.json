@@ -62,6 +62,46 @@
     "webdriver-update": "./node_modules/protractor/bin/webdriver-manager update",
     "compodoc": "./node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "./node_modules/.bin/compodoc -s"
+  },
+  "author": "Minko Gechev <mgechev>",
+  "contributors": [
+    {
+      "name": "Nathan Walker <NathanWalker>"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "@angular/animations": "~4.1.0",
+    "@angular/compiler-cli": "~4.1.0",
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/forms": "~4.1.0",
+    "@angular/http": "~4.1.0",
+    "@angular/platform-browser": "~4.1.0",
+    "@angular/platform-browser-dynamic": "~4.1.0",
+    "@angular/platform-server": "~4.1.0",
+    "@angular/router": "~4.1.0",
+    "@angular/service-worker": "~1.0.0-beta.13",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.4",
+    "@ngrx/store": "^2.2.3",
+    "@ngx-translate/core": "~7.0.0",
+    "@ngx-translate/http-loader": "0.1.0",
+    "angulartics2": "^2.2.1",
+    "core-js": "^2.4.1",
+    "es-module-loader": "^1.0.0",
+    "intl": "^1.2.5",
+    "lodash": "^4.17.4",
+    "minimatch": "^3.0.3",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "~5.4.0",
+    "systemjs": "0.19.41",
+    "typescript": "~2.3.0",
+    "zone.js": "^0.8.7",
     "@ngrx/store-devtools": "^3.2.4",
     "@compodoc/compodoc": "^1.0.0-beta.7",
     "@types/async": "^2.0.32",
@@ -159,45 +199,5 @@
     "typedoc": "^0.6.0",
     "walk": "^2.3.9",
     "yargs": "^8.0.1"
-  },
-  "author": "Minko Gechev <mgechev>",
-  "contributors": [
-    {
-      "name": "Nathan Walker <NathanWalker>"
-    }
-  ],
-  "license": "MIT",
-  "devDependencies": {
-
-  },
-  "dependencies": {
-    "@angular/animations": "~4.1.0",
-    "@angular/compiler-cli": "~4.1.0",
-    "@angular/common": "~4.1.0",
-    "@angular/compiler": "~4.1.0",
-    "@angular/core": "~4.1.0",
-    "@angular/forms": "~4.1.0",
-    "@angular/http": "~4.1.0",
-    "@angular/platform-browser": "~4.1.0",
-    "@angular/platform-browser-dynamic": "~4.1.0",
-    "@angular/platform-server": "~4.1.0",
-    "@angular/router": "~4.1.0",
-    "@angular/service-worker": "~1.0.0-beta.13",
-    "@ngrx/core": "^1.2.0",
-    "@ngrx/effects": "^2.0.4",
-    "@ngrx/store": "^2.2.3",
-    "@ngx-translate/core": "~7.0.0",
-    "@ngx-translate/http-loader": "0.1.0",
-    "angulartics2": "^2.2.1",
-    "core-js": "^2.4.1",
-    "es-module-loader": "^1.0.0",
-    "intl": "^1.2.5",
-    "lodash": "^4.17.4",
-    "minimatch": "^3.0.3",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "~5.4.0",
-    "systemjs": "0.19.41",
-    "typescript": "~2.3.0",
-    "zone.js": "^0.8.7"
   }
 }
