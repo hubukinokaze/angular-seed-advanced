@@ -62,15 +62,6 @@
     "webdriver-update": "./node_modules/protractor/bin/webdriver-manager update",
     "compodoc": "./node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "./node_modules/.bin/compodoc -s"
-  },
-  "author": "Minko Gechev <mgechev>",
-  "contributors": [
-    {
-      "name": "Nathan Walker <NathanWalker>"
-    }
-  ],
-  "license": "MIT",
-  "devDependencies": {
     "@ngrx/store-devtools": "^3.2.4",
     "@compodoc/compodoc": "^1.0.0-beta.7",
     "@types/async": "^2.0.32",
@@ -168,6 +159,16 @@
     "typedoc": "^0.6.0",
     "walk": "^2.3.9",
     "yargs": "^8.0.1"
+  },
+  "author": "Minko Gechev <mgechev>",
+  "contributors": [
+    {
+      "name": "Nathan Walker <NathanWalker>"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+
   },
   "dependencies": {
     "@angular/animations": "~4.1.0",
