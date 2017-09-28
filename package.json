@@ -133,7 +133,6 @@
     "systemjs-builder": "0.15.34",
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
-    "ts-node": "^3.0.4",
     "tslint": "^5.0.0",
     "typedoc": "^0.6.0",
     "walk": "^2.3.9",
@@ -168,7 +167,6 @@
     "systemjs": "0.19.41",
     "typescript": "~2.3.0",
     "zone.js": "^0.8.7",
-
     "gulp": "^3.9.1",
     "gulp-atom-electron": "^1.6.1",
     "gulp-cached": "^1.1.0",
@@ -193,6 +191,7 @@
     "gulp-typescript": "^3.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.10"
+    "gulp-watch": "^4.3.10",
+    "ts-node": "^3.0.4"
   }
 }
