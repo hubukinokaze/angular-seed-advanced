@@ -16,7 +16,7 @@ This is an **advanced** seed project for Angular apps based on [Minko Gechev's](
   - Up to you and your team how you want to utilize it. It can be easily removed if not needed. 
 - [angulartics2](https://github.com/angulartics/angulartics2) Vendor-agnostic analytics for Angular applications.
   - Out of box support for [Segment](https://segment.com/)
-    - When using the seed, be sure to change your `write_key` [here](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/index.html#L24)
+    - When using the seed, be sure to change your `write_key` [here](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/index.html#L24)
   - Can be changed to any vendor, [learn more here](https://github.com/angulartics/angulartics2#supported-providers)
 - [lodash](https://lodash.com/) Helps reduce blocks of code down to single lines and enhances readability
 - [NativeScript](https://www.nativescript.org/) cross platform mobile (w/ native UI) apps. [Setup instructions here](#mobile-app).
@@ -42,7 +42,7 @@ This is an **advanced** seed project for Angular apps based on [Minko Gechev's](
 - [Code organization overview](#code-organization-overview)
 - [How-tos](#how-tos)
 - [General best practice guide to sharing code](#general-best-practice-guide-to-sharing-code)
-- [Integration guides](https://github.com/NathanWalker/angular-seed-advanced/wiki)
+- [Integration guides](https://github.com/hubukinokaze/hikineetos-life/wiki)
 - [How best to use for your project](#how-best-to-use-for-your-project)
 - [Dockerization](#dockerization)
   + [How to build and start the dockerized version of the application](#how-to-build-and-start-the-dockerized-version-of-the-application)
@@ -119,7 +119,7 @@ npm install -g nativescript
 
 You can make changes to files in `src/client/app` or `nativescript/src/app` folders. A symbolic link exists between the web `src/client/app` and the `nativescript/src/app` folder so changes in either location are mirrored because they are the same directory inside.
 
-Create `.tns.html` and `.tns.scss` NativeScript view files for every web component view file you have. You will see an example of the `app.component.html` as a [NativeScript view file here](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/app/components/app.component.tns.html).
+Create `.tns.html` and `.tns.scss` NativeScript view files for every web component view file you have. You will see an example of the `app.component.html` as a [NativeScript view file here](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/app/components/app.component.tns.html).
 
 The root module for the mobile app is `nativescript/src/native.module.ts`: `NativeModule`. 
 
@@ -251,7 +251,7 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
     - `app`: Symbolic link of shared code from web app.
     - `App_Resources`: iOS and Android platform specific config files and images.
     - `mobile`: Mobile specific services, etc. Build out mobile specific services here as well as overrides for web services that need to be provided for in the mobile app. **Safe to import {N} modules here.**
-    - [native.module.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/nativescript/src/native.module.ts): Root module for the mobile app provided by NativeScript. Override/provide native mobile implementations of services here.
+    - [native.module.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/nativescript/src/native.module.ts): Root module for the mobile app provided by NativeScript. Override/provide native mobile implementations of services here.
 - `src/client`: Root of this directory is reserved for web and desktop.
   - `app`: All the code in this directory is shared with the mobile app via a symbolic link.
     - `components`: Reserved for primary routing components. Since each app usually has it's own set of unique routes, you can provide the app's primary routing components here.
@@ -266,14 +266,14 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
   - `assets`: Various locale files, images and other assets the app needs to load.
   - `css`: List of the main style files to be created via the SASS compilation (enabled by default).
   - `scss`: Partial SASS files - reserved for things like `_variables.scss` and other imported partials for styling.
-  - [index.html](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/index.html): The index file for the web and desktop app (which share the same setup).
-  - [main.desktop.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/main.desktop.ts): The  file used by Electron to start the desktop app.
-  - [main.web.prod.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/main.web.prod.ts): Bootstraps the AoT web build. *Generally won't modify anything here*
-  - [main.web.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/main.web.ts): Bootstraps the development web build. *Generally won't modify anything here*
-  - [package.json](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/package.json): Used by Electron to start the desktop app.
-  - [system-config.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/system-config.ts): This loads the SystemJS configuration defined [here](https://github.com/NathanWalker/angular-seed-advanced/blob/master/tools/config/seed.config.ts#L397) and extended in your own app's customized [project.config.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/tools/config/project.config.ts).
-  - [tsconfig.json](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/tsconfig.json): Used by [compodoc](https://compodoc.github.io/compodoc/) - The missing documentation tool for your Angular application - to generate api docs for your code.
-  - [web.module.ts](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/web.module.ts): The root module for the web and desktop app.
+  - [index.html](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/index.html): The index file for the web and desktop app (which share the same setup).
+  - [main.desktop.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/main.desktop.ts): The  file used by Electron to start the desktop app.
+  - [main.web.prod.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/main.web.prod.ts): Bootstraps the AoT web build. *Generally won't modify anything here*
+  - [main.web.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/main.web.ts): Bootstraps the development web build. *Generally won't modify anything here*
+  - [package.json](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/package.json): Used by Electron to start the desktop app.
+  - [system-config.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/system-config.ts): This loads the SystemJS configuration defined [here](https://github.com/hubukinokaze/hikineetos-life/blob/master/tools/config/seed.config.ts#L397) and extended in your own app's customized [project.config.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/tools/config/project.config.ts).
+  - [tsconfig.json](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/tsconfig.json): Used by [compodoc](https://compodoc.github.io/compodoc/) - The missing documentation tool for your Angular application - to generate api docs for your code.
+  - [web.module.ts](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/web.module.ts): The root module for the web and desktop app.
 - `src/e2e`: Integration/end-to-end tests for the web app.
 
 ## How-tos
@@ -283,7 +283,7 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
 * how to add a language?
   - `src/client/assets/i18n/`
     - add `[language code].json` (copy existing one and adapt the translation strings)
-  - `https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/web.module.ts#L98-L101`
+  - `https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/web.module.ts#L98-L101`
     - Configure `Languages` InjectionToken with array of supported languages
   - `src/client/app/modules/i18n/components/lang-switcher.component.spec.ts`
     - fix test
@@ -314,11 +314,11 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
 
 ## General best practice guide to sharing code
 
-There’s actually only a few things to keep in mind when sharing code between web/mobile. The seed does take care of quite a few of those things but here’s a brief list:
+Thereâs actually only a few things to keep in mind when sharing code between web/mobile. The seed does take care of quite a few of those things but hereâs a brief list:
 
-* Don’t import {N} modules into your components/services. {N} modules can only be used inside the {N} app therefore cannot be shared. To get around this, use `InjectionToken`'s. [Learn more here](http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html). A great example of how to integrate 2 different plugins (1 for web, 1 for {N}) and share all the code exists in [this wiki article: How to integrate Firebase across all platforms](https://github.com/NathanWalker/angular-seed-advanced/wiki/How-to-integrate-Firebase-across-all-platforms-(web-nativescript-desktop)) written by the awesome [Scott Lowe](https://twitter.com/scott_d_lowe).
-* Use the conditional hooks provided by the seed in shared methods where you may need to handle something differently in {N} than you do on the web. For example, see [here](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/app/modules/i18n/components/lang-switcher.component.ts#L35-L41).
-* Don’t use window global. Inject the `WindowService` provided by the seed instead. This includes usage of `alert`, `confirm`, etc. For example:
+* Donât import {N} modules into your components/services. {N} modules can only be used inside the {N} app therefore cannot be shared. To get around this, use `InjectionToken`'s. [Learn more here](http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html). A great example of how to integrate 2 different plugins (1 for web, 1 for {N}) and share all the code exists in [this wiki article: How to integrate Firebase across all platforms](https://github.com/hubukinokaze/hikineetos-life/wiki/How-to-integrate-Firebase-across-all-platforms-(web-nativescript-desktop)) written by the awesome [Scott Lowe](https://twitter.com/scott_d_lowe).
+* Use the conditional hooks provided by the seed in shared methods where you may need to handle something differently in {N} than you do on the web. For example, see [here](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/app/modules/i18n/components/lang-switcher.component.ts#L35-L41).
+* Donât use window global. Inject the `WindowService` provided by the seed instead. This includes usage of `alert`, `confirm`, etc. For example:
 
 If you were thinking about doing: `alert('Something happened!');`, *Don't*.
 Instead inject `WindowService`:
@@ -336,11 +336,11 @@ public userAction() {
 
 This ensures that when the same code is run in the {N} app, the native `dialogs` module will be used.
 
-* Lastly, understand this video: http://www.nativescriptsnacks.com/videos/2016/06/13/zoned-callbacks.html … As far as dealing with {N} and 3rd party plugins, you want to understand that.
+* Lastly, understand this video: http://www.nativescriptsnacks.com/videos/2016/06/13/zoned-callbacks.html â¦ As far as dealing with {N} and 3rd party plugins, you want to understand that.
 
 The advice I like to give is:
 
-> Code with web mentality first. Then provide the native capability using Angular’s `{provide: SomeWebService, useClass: SomeNativeService }` during bootstrap.
+> Code with web mentality first. Then provide the native capability using Angularâs `{provide: SomeWebService, useClass: SomeNativeService }` during bootstrap.
 
 There are some cases where you may want to use `useValue` vs. `useClass`, and other times may need to use `useFactory`. Read [the Angular docs here to learn more about which you may need for your use case](https://angular.io/docs/ts/latest/cookbook/dependency-injection.html#!#provide).
 
@@ -350,13 +350,13 @@ There are some cases where you may want to use `useValue` vs. `useClass`, and ot
 
 *NOTE*: This should be done first before you start making any changes and building out your project.
 
-1. `git clone https://github.com/NathanWalker/angular-seed-advanced.git [your-project-name]`
+1. `git clone https://github.com/hubukinokaze/hikineetos-life.git [your-project-name]`
 2. `cd [your-project-name]`
 3. `git remote set-url origin [your-project-git-repo]` - This will setup `origin` properly.
-4. `git remote add upstream https://github.com/NathanWalker/angular-seed-advanced.git` - This will setup `upstream` properly to merge in upstream changes later.
+4. `git remote add upstream https://github.com/hubukinokaze/hikineetos-life.git` - This will setup `upstream` properly to merge in upstream changes later.
 5. `git push` - Go ahead and push up the initial project.
 6. Now you have `git` setup and ready to develop your app as well as merge in upstream changes in the future.
-7. `npm install` (and all other usage docs in this `README` apply) - continue following instructions [here](https://github.com/NathanWalker/angular-seed-advanced#how-to-start).
+7. `npm install` (and all other usage docs in this `README` apply) - continue following instructions [here](https://github.com/hubukinokaze/hikineetos-life#how-to-start).
 8. Create a new folder (or several sub-folders) for your app in `src/client/app/shared` to build your codebase out. Say your app is called `AwesomeApp`, then create `awesomeapp` and start building out all your components and services in there. Create other frameworks as you see fit to organize.
 
 #### Merging latest upstream changes
@@ -368,7 +368,7 @@ There are some cases where you may want to use `useValue` vs. `useClass`, and ot
 
 You can read more about [syncing a fork here](https://help.github.com/articles/syncing-a-fork/).
 
-If you have any suggestions to this workflow, please post [here](https://github.com/NathanWalker/angular-seed-advanced/issues).
+If you have any suggestions to this workflow, please post [here](https://github.com/hubukinokaze/hikineetos-life/issues).
 
 # Dockerization
 
@@ -406,7 +406,7 @@ Now open your browser at http://localhost:5555
 
 ## Contributing
 
-Please see the [CONTRIBUTING](https://github.com/NathanWalker/angular-seed-advanced/blob/master/CONTRIBUTING.md) file for guidelines.
+Please see the [CONTRIBUTING](https://github.com/hubukinokaze/hikineetos-life/blob/master/CONTRIBUTING.md) file for guidelines.
 
 # Awesome Contributors
 

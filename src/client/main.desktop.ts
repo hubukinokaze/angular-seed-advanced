@@ -20,7 +20,7 @@ import { DesktopConfig } from './app/modules/electron/index';
 // crashReporter.start({
 //   productName: 'AngularSeedAdvanced',
 //   companyName: 'NathanWalker',
-//   submitURL: 'https://github.com/NathanWalker/angular-seed-advanced',
+//   submitURL: 'https://github.com/hubukinokaze/hikineetos-life',
 //   autoSubmit: true
 // });
 
@@ -51,7 +51,7 @@ app.on('ready', () => {
     console.log(`Page navigated: ${url}`);
   });
 
-  let appTitle: string = `Angular Seed Advanced`;
+  let appTitle: string = `HikiNEETO's Life`;
 
   let langMenu: any = {
     label: 'Language',
@@ -74,12 +74,12 @@ app.on('ready', () => {
     submenu: [{
       label: 'Learn More',
       click:() => {
-        shell.openExternal('https://github.com/NathanWalker/angular-seed-advanced');
+        shell.openExternal('https://github.com/hubukinokaze/hikineetos-life');
       }
     }, {
         label: 'Issues',
         click:() => {
-          shell.openExternal('https://github.com/NathanWalker/angular-seed-advanced/issues');
+          shell.openExternal('https://github.com/hubukinokaze/hikineetos-life/issues');
         }
       }, {
         label: `My Amazing Parent: Minko Gechev's Angular Seed`,
