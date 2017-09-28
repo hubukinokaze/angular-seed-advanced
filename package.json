@@ -6,7 +6,7 @@
     "url": "https://github.com/NathanWalker/angular-seed-advanced"
   },
   "scripts": {
-    "build": "node server.js",
+    "build": "ng build",
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac --desktop --desktopBuild",
     "build.desktop.windows": "rimraf desktop/windows/* && gulp desktop.windows --desktop --desktopBuild",
     "build.desktop.linux": "rimraf desktop/linux/* && gulp desktop.linux --desktop --desktopBuild",
@@ -35,6 +35,7 @@
     "nativescript-install": "cd nativescript && npm install",
     "postinstall": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp webdriver && npm run nativescript-install && node tools/install.js",
     "reinstall": "npm cache clean && npm install",
+    "serve": "ng serve",
     "serve.coverage": "gulp serve.coverage --color",
     "serve.dev": "gulp serve.dev --color --env-config dev",
     "serve.e2e": "gulp serve.e2e --color",
@@ -42,7 +43,8 @@
     "serve.prod.aot": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.exp": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.rollup.aot": "gulp serve.prod.rollup.aot --color --env-config prod --build-type prod",
-    "start": "gulp serve.dev --color",
+    "start": "node server.js",
+    "start2": "gulp serve.dev --color",
     "start.deving": "gulp start.deving --color",
     "start.desktop": "gulp desktop --desktop && NODE_ENV=development electron ./dist/dev",
     "start.livesync.desktop": "gulp desktop --desktop && NODE_ENV=development gulp desktop.watch",
