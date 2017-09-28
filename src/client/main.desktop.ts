@@ -37,7 +37,12 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
 
   // Initialize the window to our specified dimensions
-  mainWindow = new BrowserWindow({ width: 900, height: 620 });
+  mainWindow = new BrowserWindow({
+    width: 900,
+    height: 620,
+    minWidth: 900,
+    minHeight: 620
+  });
 
   // Tell Electron where to load the entry point from
   mainWindow.loadURL('file://' + __dirname + '/index.html');

@@ -115,7 +115,6 @@
     "minimatch": "^3.0.3",
     "mkdirp": "^0.5.1",
     "ngrx-store-freeze": "0.1.6",
-    "open": "0.0.5",
     "protractor": "^4.0.14",
     "remap-istanbul": "^0.9.5",
     "rimraf": "^2.5.4",
@@ -190,6 +189,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.10",
+    "open": "0.0.5",
     "run-sequence": "^1.2.2",
     "ts-node": "^3.0.4",
     "yargs": "^8.0.1"
