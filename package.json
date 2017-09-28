@@ -125,7 +125,6 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-includepaths": "0.2.2",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "run-sequence": "^1.2.2",
     "semver": "^5.3.0",
     "serve-static": "^1.11.1",
     "slash": "~1.0.0",
@@ -192,6 +191,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.10",
+    "run-sequence": "^1.2.2",
     "ts-node": "^3.0.4"
   }
 }
