@@ -82,29 +82,9 @@ app.on('ready', () => {
           shell.openExternal('https://github.com/hubukinokaze/hikineetos-life/issues');
         }
       }, {
-        label: `My Amazing Parent: Minko Gechev's Angular Seed`,
+        label: 'Website',
         click:() => {
-          shell.openExternal('https://github.com/mgechev/angular-seed');
-        }
-      }, {
-        label: 'Angular 2',
-        click:() => {
-          shell.openExternal('https://angular.io/');
-        }
-      }, {
-        label: 'Electron',
-        click:() => {
-          shell.openExternal('http://electron.atom.io/');
-        }
-      }, {
-        label: 'Electron Docs',
-        click: () => {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs');
-        }
-      }, {
-        label: 'Codeology Visualization',
-        click:() => {
-          shell.openExternal('http://codeology.braintreepayments.com/nathanwalker/angular-seed-advanced');
+          shell.openExternal('http://hikineetoslife.herokuapp.com');
         }
       }]
   };
