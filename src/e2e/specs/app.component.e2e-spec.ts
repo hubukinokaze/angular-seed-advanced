@@ -8,7 +8,7 @@ t.describe('App', function() {
   });
 
   t.it('should have a title', function() {
-    t.e(browser.getTitle()).toEqual('Angular Seed Advanced');
+    t.e(browser.getTitle()).toEqual('HikiNEETO's Life');
   });
 
   t.it('should have <nav>', function() {

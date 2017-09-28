@@ -123,7 +123,7 @@ app.on('ready', () => {
         }, {
           type: 'separator'
         }, {
-          label: 'Hide Angular Seed Advanced',
+          label: 'Hide HikiNEETO's Life',
           accelerator: 'Command+H',
           selector: 'hide:'
         }, {

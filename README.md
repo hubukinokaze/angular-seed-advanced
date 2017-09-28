@@ -1,4 +1,4 @@
-![Angular Seed Advanced](https://cdn.filestackcontent.com/LSWpUEEGQiOdCpv9t6Ri?v=0)
+![HikiNEETO's Life](https://cdn.filestackcontent.com/LSWpUEEGQiOdCpv9t6Ri?v=0)
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 [![Build Status](https://travis-ci.org/NathanWalker/angular-seed-advanced.svg?branch=master)](https://travis-ci.org/Nate.hanWalker/angular-seed-advanced)
@@ -314,11 +314,11 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
 
 ## General best practice guide to sharing code
 
-Thereâs actually only a few things to keep in mind when sharing code between web/mobile. The seed does take care of quite a few of those things but hereâs a brief list:
+There??????s actually only a few things to keep in mind when sharing code between web/mobile. The seed does take care of quite a few of those things but here??????s a brief list:
 
-* Donât import {N} modules into your components/services. {N} modules can only be used inside the {N} app therefore cannot be shared. To get around this, use `InjectionToken`'s. [Learn more here](http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html). A great example of how to integrate 2 different plugins (1 for web, 1 for {N}) and share all the code exists in [this wiki article: How to integrate Firebase across all platforms](https://github.com/hubukinokaze/hikineetos-life/wiki/How-to-integrate-Firebase-across-all-platforms-(web-nativescript-desktop)) written by the awesome [Scott Lowe](https://twitter.com/scott_d_lowe).
+* Don??????t import {N} modules into your components/services. {N} modules can only be used inside the {N} app therefore cannot be shared. To get around this, use `InjectionToken`'s. [Learn more here](http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html). A great example of how to integrate 2 different plugins (1 for web, 1 for {N}) and share all the code exists in [this wiki article: How to integrate Firebase across all platforms](https://github.com/hubukinokaze/hikineetos-life/wiki/How-to-integrate-Firebase-across-all-platforms-(web-nativescript-desktop)) written by the awesome [Scott Lowe](https://twitter.com/scott_d_lowe).
 * Use the conditional hooks provided by the seed in shared methods where you may need to handle something differently in {N} than you do on the web. For example, see [here](https://github.com/hubukinokaze/hikineetos-life/blob/master/src/client/app/modules/i18n/components/lang-switcher.component.ts#L35-L41).
-* Donât use window global. Inject the `WindowService` provided by the seed instead. This includes usage of `alert`, `confirm`, etc. For example:
+* Don??????t use window global. Inject the `WindowService` provided by the seed instead. This includes usage of `alert`, `confirm`, etc. For example:
 
 If you were thinking about doing: `alert('Something happened!');`, *Don't*.
 Instead inject `WindowService`:
@@ -336,11 +336,11 @@ public userAction() {
 
 This ensures that when the same code is run in the {N} app, the native `dialogs` module will be used.
 
-* Lastly, understand this video: http://www.nativescriptsnacks.com/videos/2016/06/13/zoned-callbacks.html â¦ As far as dealing with {N} and 3rd party plugins, you want to understand that.
+* Lastly, understand this video: http://www.nativescriptsnacks.com/videos/2016/06/13/zoned-callbacks.html ?????? As far as dealing with {N} and 3rd party plugins, you want to understand that.
 
 The advice I like to give is:
 
-> Code with web mentality first. Then provide the native capability using Angularâs `{provide: SomeWebService, useClass: SomeNativeService }` during bootstrap.
+> Code with web mentality first. Then provide the native capability using Angular??????s `{provide: SomeWebService, useClass: SomeNativeService }` during bootstrap.
 
 There are some cases where you may want to use `useValue` vs. `useClass`, and other times may need to use `useFactory`. Read [the Angular docs here to learn more about which you may need for your use case](https://angular.io/docs/ts/latest/cookbook/dependency-injection.html#!#provide).
 

@@ -193,6 +193,6 @@
     "gulp-typescript": "^3.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.10",
+    "gulp-watch": "^4.3.10"
   }
 }
