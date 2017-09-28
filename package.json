@@ -134,8 +134,7 @@
     "traceur": "^0.0.111",
     "tslint": "^5.0.0",
     "typedoc": "^0.6.0",
-    "walk": "^2.3.9",
-    "yargs": "^8.0.1"
+    "walk": "^2.3.9"
   },
   "dependencies": {
     "@angular/animations": "~4.1.0",
@@ -192,6 +191,7 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.10",
     "run-sequence": "^1.2.2",
-    "ts-node": "^3.0.4"
+    "ts-node": "^3.0.4",
+    "yargs": "^8.0.1"
   }
 }
