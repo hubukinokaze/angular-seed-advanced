@@ -106,7 +106,7 @@
     "supports-color": "^3.1.2",
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
-    "tslint": "^5.0.0",
+    "tslint": "^5.7.0",
     "typedoc": "^0.6.0",
     "walk": "^2.3.9"
   },

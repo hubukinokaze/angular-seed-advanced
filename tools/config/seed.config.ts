@@ -181,7 +181,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = "Welcome to HikiNEETO's Life";
+  APP_TITLE = 'Welcome to HikiNEETO\'s Life';
 
   /**
    * Tracking ID.

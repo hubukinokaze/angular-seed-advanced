@@ -108,7 +108,7 @@ app.on('ready', () => {
         }, {
           type: 'separator'
         }, {
-          label: "Hide HikiNEETO's Life",
+          label: appTitle,
           accelerator: 'Command+H',
           selector: 'hide:'
         }, {
