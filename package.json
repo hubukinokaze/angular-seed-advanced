@@ -1,7 +1,7 @@
 {
   "name": "hikineetos-life",
   "version": "1.0.0",
-  "description": "High-quality, modular starter (advanced seed) project for Angular 2 apps with statically typed build and AoT + NativeScript + Electron",
+  "description": "High-quality, modular starter project for Angular 2 apps with statically typed build and AoT + NativeScript + Electron",
   "repository": {
     "url": "https://github.com/hubukinokaze/hikineetos-life"
   },
@@ -28,7 +28,6 @@
     "e2e": "protractor",
     "e2e.live": "protractor --elementExplorer",
     "gulp": "gulp",
-    "i18n": "ng-xi18n -p src/client/tsconfig.json && gulp clean.i18n",
     "lint": "gulp tslint",
     "karma": "karma",
     "karma.start": "karma start",
@@ -107,6 +106,7 @@
     "supports-color": "^3.1.2",
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
+    "tslint": "^5.0.0",
     "typedoc": "^0.6.0",
     "walk": "^2.3.9"
   },
@@ -184,7 +184,6 @@
     "systemjs": "0.19.41",
     "systemjs-builder": "0.15.34",
     "ts-node": "^3.3.0",
-    "tslint": "^5.0.0",
     "typescript": "~2.3.0",
     "yargs": "^8.0.2",
     "zone.js": "^0.8.18"
