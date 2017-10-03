@@ -33,7 +33,7 @@
     "karma": "karma",
     "karma.start": "karma start",
     "nativescript-install": "cd nativescript && npm install",
-    "postinstall": "ng build --env-config prod --build-type prod",
+    "postinstall": "gulp build.prod --color --env-config prod --build-type prod",
     "postinstall2": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp webdriver && npm run nativescript-install && node tools/install.js",
     "reinstall": "npm cache clean && npm install",
     "serve": "ng serve",
