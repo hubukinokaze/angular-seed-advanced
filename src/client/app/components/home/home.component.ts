@@ -1,12 +1,9 @@
 // libs
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
 // app
 import { RouterExtensions, Config } from '../../modules/core/index';
-import { IAppState, getNames } from '../../modules/ngrx/index';
-import { NameList } from '../../modules/sample/index';
 
 @Component({
   moduleId: module.id,
@@ -18,10 +15,9 @@ export class HomeComponent implements OnInit {
   public names$: Observable<any>;
   public newName: string;
 
-  constructor(private store: Store<IAppState>, public routerext: RouterExtensions) {}
+  constructor(public routerext: RouterExtensions) {}
 
   ngOnInit() {
-    this.names$ = this.store.let(getNames);
     this.newName = '';
   }
 
@@ -30,7 +26,6 @@ export class HomeComponent implements OnInit {
    * @returns return false to prevent default form submit behavior to refresh the page.
    */
   addName(): boolean {
-    this.store.dispatch(new NameList.AddAction(this.newName));
     this.newName = '';
     return false;
   }

@@ -1,5 +1,6 @@
 // app
 import { Component } from '@angular/core';
+import { SharedModule } from '../../shared.module';
 
 @Component({
   moduleId: module.id,

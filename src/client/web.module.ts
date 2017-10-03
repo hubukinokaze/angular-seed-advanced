@@ -5,12 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Http } from '@angular/http';
 
-// libs
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { TranslateLoader } from '@ngx-translate/core';
-
 // app
 import { APP_COMPONENTS, AppComponent } from './app/components/index';
 import { routes } from './app/components/app.routes';
@@ -19,9 +13,7 @@ import { routes } from './app/components/app.routes';
 import { WindowService, StorageService, ConsoleService, createConsoleTarget, provideConsoleTarget, LogTarget, LogLevel, ConsoleTarget } from './app/modules/core/services/index';
 import { CoreModule, Config } from './app/modules/core/index';
 import { AnalyticsModule } from './app/modules/analytics/index';
-import { MultilingualModule, Languages, translateLoaderFactory, MultilingualEffects } from './app/modules/i18n/index';
-import { SampleModule, SampleEffects } from './app/modules/sample/index';
-import { AppReducer } from './app/modules/ngrx/index';
+import { SharedModule } from './app/modules/shared/shared.module';
 
 // config
 Config.PLATFORM_TARGET = Config.PLATFORMS.WEB;
@@ -59,7 +51,6 @@ let DEV_IMPORTS: any[] = [];
 if (String('<%= BUILD_TYPE %>') === 'dev') {
   DEV_IMPORTS = [
     ...DEV_IMPORTS,
-    StoreDevtoolsModule.instrumentOnlyWithExtension()
   ];
 }
 
@@ -74,17 +65,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     ]),
     routerModule,
     AnalyticsModule,
-    MultilingualModule.forRoot([{
-      provide: TranslateLoader,
-      deps: [Http],
-      useFactory: (translateLoaderFactory)
-    }]),
-    SampleModule,
-    // configure app state
-    StoreModule.provideStore(AppReducer),
-    EffectsModule.run(MultilingualEffects),
-    EffectsModule.run(SampleEffects),
-    // dev environment only imports
+    SharedModule,
     DEV_IMPORTS,
   ],
   declarations: [
@@ -94,11 +75,6 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     {
       provide: APP_BASE_HREF,
       useValue: '<%= APP_BASE %>'
-    },
-    // override with supported languages
-    {
-      provide: Languages,
-      useValue: Config.GET_SUPPORTED_LANGUAGES()
     }
   ],
   bootstrap: [AppComponent]

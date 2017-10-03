@@ -8,10 +8,6 @@ import { SegmentedBarItem } from 'tns-core-modules/ui/segmented-bar';
 // angular
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
-// libs
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-
 // app
 import {
   WindowService,
@@ -72,10 +68,7 @@ export function segmentViewHelper(languages) {
       { provide: LogTarget, multi: true, deps: [ConsoleService], useFactory: (consoleLogTarget) }
     ]),
     ComponentsModule,
-    NativeScriptRouterModule.forRoot(<any>routes),
-    StoreModule.provideStore(AppReducer),
-    EffectsModule.run(MultilingualEffects),
-    EffectsModule.run(SampleEffects)
+    NativeScriptRouterModule.forRoot(<any>routes)
   ],
   providers: [
     NS_ANALYTICS_PROVIDERS,

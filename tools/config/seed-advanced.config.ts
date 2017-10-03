@@ -74,38 +74,6 @@ export class SeedAdvancedConfig extends SeedConfig {
         }
       },
       {
-        name: '@ngrx/core',
-        packageMeta: {
-          main: 'bundles/core.umd.js',
-          defaultExtension: 'js'
-        }
-      },
-      {
-        name: '@ngrx/store',
-        packageMeta: {
-          main: 'bundles/store.umd.js',
-          defaultExtension: 'js'
-        }
-      },
-      {
-        name: '@ngrx/effects',
-        packageMeta: {
-          main: 'bundles/effects.umd.js',
-          defaultExtension: 'js'
-        }
-      },
-      {
-        name: '@ngrx/effects/testing',
-        path: 'node_modules/@ngrx/effects/testing/index.js'
-      },
-      {
-        name: '@ngrx/store-devtools',
-        packageMeta: {
-          main: 'bundles/store-devtools.umd.js',
-          defaultExtension: 'js'
-        }
-      },
-      {
         name: '@ngx-translate/core',
         packageMeta: {
           main: 'bundles/core.umd.js',
@@ -125,10 +93,6 @@ export class SeedAdvancedConfig extends SeedConfig {
           main: 'dist/core.umd.js',
           defaultExtension: 'js'
         }
-      },
-      {
-        name: 'ngrx-store-freeze',
-        path: 'node_modules/ngrx-store-freeze/dist/index.js'
       },
       {
         name: 'deep-freeze-strict',

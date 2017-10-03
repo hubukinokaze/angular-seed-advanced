@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 // modules
-import { MultilingualModule } from '../i18n/index';
 import { SHARED_COMPONENTS } from './components/index';
 
 const SHARED_MODULES: any[] = [
@@ -13,7 +12,6 @@ const SHARED_MODULES: any[] = [
   HttpModule,
   FormsModule,
   RouterModule,
-  MultilingualModule
 ];
 
 /**

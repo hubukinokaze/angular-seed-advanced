@@ -9,16 +9,9 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-// libs
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-
 import { t } from '../../modules/test/index';
-import { NameListService, SampleEffects, reducer } from '../../modules/sample/index';
 import { CoreModule } from '../../modules/core/core.module';
 import { AnalyticsModule } from '../../modules/analytics/analytics.module';
-import { MultilingualModule } from '../../modules/i18n/multilingual.module';
-import { LanguageProviders } from '../../modules/i18n/index';
 import { SharedModule } from '../../modules/shared/index';
 import { NovelComponent } from './novel.component';
 
@@ -29,15 +22,10 @@ const testModuleConfig = () => {
       CoreModule,
       SharedModule,
       RouterTestingModule,
-      AnalyticsModule,
-      MultilingualModule,
-      StoreModule.provideStore({ sample: reducer }),
-      EffectsModule.run(SampleEffects)
+      AnalyticsModule
     ],
     declarations: [NovelComponent, TestComponent],
     providers: [
-      LanguageProviders,
-      NameListService,
       BaseRequestOptions,
       MockBackend,
       {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../../shared.module';
 
 // app
 import { LogService } from '../../../core/services/logging/log.service';
