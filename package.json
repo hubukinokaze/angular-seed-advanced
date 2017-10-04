@@ -11,7 +11,7 @@
   },
   "scripts": {
     "heroku-prebuild": "npm install http-server ts-node --save",
-    "heroku-postbuild": "gulp build.prod",
+    "heroku-postbuild": "typings install && gulp check.versions && npm prune && gulp build.prod",
     "start": "http-server dist/prod/",
     "start3": "gulp serve.prod --color",
     "build": "ng build",
@@ -114,6 +114,7 @@
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
     "tslint": "^5.7.0",
+    "ts-node": "^3.3.0",
     "typedoc": "^0.6.0",
     "walk": "^2.3.9"
   },
@@ -191,7 +192,6 @@
     "rxjs": "~5.4.0",
     "systemjs": "0.19.41",
     "systemjs-builder": "0.15.34",
-    "ts-node": "^3.0.0",
     "typescript": "^2.3.3",
     "yargs": "^8.0.2",
     "zone.js": "^0.8.18"
