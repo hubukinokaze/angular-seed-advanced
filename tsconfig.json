@@ -37,7 +37,9 @@
     "tools/manual_typings/seed/operators.d.ts",
     "tools/manual_typings/seed/slash.d.ts",
     "tools/manual_typings/seed/systemjs-builder.d.ts",
-    "tools/manual_typings/seed/tildify.d.ts"
+    "tools/manual_typings/seed/tildify.d.ts",
+    "tools/utils/project/server.ts",
+    "tools/utils/seed/server.ts"
   ],
   "exclude": [
     "desktop",
