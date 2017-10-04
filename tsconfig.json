@@ -45,7 +45,6 @@
     "desktop",
     "nativescript",
     "node_modules",
-    "dist",
     "src"
   ],
   "compileOnSave": false
