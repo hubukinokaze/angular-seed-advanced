@@ -46,7 +46,7 @@
     "serve.prod.aot": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.exp": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.rollup.aot": "gulp serve.prod.rollup.aot --color --env-config prod --build-type prod",
-    "start": "node ./utils/project/server.ts",
+    "start": "gulp build.prod serve.prod && ts-node tools/utils/project/server.ts",
     "start.dev": "gulp serve.dev --color",
     "start.prod": "gulp serve.prod --color",
     "start.deving": "gulp start.deving --color",
