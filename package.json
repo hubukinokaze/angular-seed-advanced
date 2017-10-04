@@ -11,7 +11,7 @@
   },
   "scripts": {
     "heroku-prebuild": "npm install http-server --save",
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "npm run build.prod",
     "start": "http-server dist/prod/",
     "build": "ng build",
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac --desktop --desktopBuild",
