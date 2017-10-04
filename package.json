@@ -10,7 +10,7 @@
     "npm": "5.3.0"
   },
   "scripts": {
-    "heroku-prebuild": "npm install -g http-server",
+    "heroku-prebuild": "npm install http-server --save",
     "heroku-postbuild": "ng build --prod",
     "start": "http-server dist/prod/",
     "build": "ng build",
@@ -179,6 +179,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
+    "http-server": "^0.10.0",
     "intl": "^1.2.5",
     "lodash": "^4.17.4",
     "minimatch": "^3.0.4",
