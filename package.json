@@ -5,6 +5,10 @@
   "repository": {
     "url": "https://github.com/hubukinokaze/hikineetos-life"
   },
+  "engines": {
+    "node": "8.5.0",
+    "npm": "5.3.0"
+  },
   "scripts": {
     "build": "ng build",
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac --desktop --desktopBuild",
@@ -43,7 +47,7 @@
     "serve.prod.aot": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.exp": "gulp serve.prod.aot --color --env-config prod --build-type prod",
     "serve.prod.rollup.aot": "gulp serve.prod.rollup.aot --color --env-config prod --build-type prod",
-    "start": "node server.js",
+    "start": "node utils/project/server.ts",
     "start.dev": "gulp serve.dev --color",
     "start.prod": "gulp serve.prod --color",
     "start.deving": "gulp start.deving --color",
