@@ -11,7 +11,7 @@
   },
   "scripts": {
     "heroku-prebuild": "npm install http-server --save",
-    "heroku-postbuild": "typings install && gulp check.versions && npm prune && gulp build.prod",
+    "heroku-postbuild": "gulp check.versions && npm prune && gulp build.prod",
     "start": "http-server dist/prod/",
     "start3": "gulp serve.prod --color",
     "build": "ng build",
