@@ -10,9 +10,10 @@
     "npm": "5.3.0"
   },
   "scripts": {
-    "heroku-prebuild": "npm install http-server typescript-register ts-node --save",
-    "heroku-postbuild": "npm run build.prod",
+    "heroku-prebuild": "npm install http-server --save",
+    "heroku-postbuild": "typings install && gulp check.versions && npm prune && gulp build.prod",
     "start": "http-server dist/prod/",
+    "start3": "gulp serve.prod --color",
     "build": "ng build",
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac --desktop --desktopBuild",
     "build.desktop.windows": "rimraf desktop/windows/* && gulp desktop.windows --desktop --desktopBuild",
