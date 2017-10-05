@@ -76,3 +76,9 @@ button:hover {
 .desktop lang-switcher {
   display: none;
 }
+
+@media all and (max-width: 500px) {
+  sd-navbar {
+    display: none !important;
+  }
+}
