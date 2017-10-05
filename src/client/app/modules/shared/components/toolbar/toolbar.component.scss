@@ -1,5 +1,7 @@
+@import '../../../../../scss/variables';
+
 :host {
-  background-color: #106cc8;
+  background-color: $primary;
   color: rgba(255, 255, 255, 0.87);
   display: block;
   height: 48px;
@@ -8,6 +10,7 @@
 }
 
 h1 {
+  color: $deckled-edge;
   display: inline;
   font-size: 20px;
   font-weight: normal;
@@ -15,18 +18,12 @@ h1 {
   line-height: 48px;
 }
 
-:host lang-switcher,
 :host .more {
   position: absolute;
 }
 
-:host lang-switcher {
-  top: 13px;
-  right: 52px;
-}
-
 .more {
-  background: url("./assets/svg/more.svg");
+  background: url("../../../../../assets/svg/more.svg");
   top: 12px;
   right: 10px;
   height: 24px;

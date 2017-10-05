@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MdListModule, MdIconModule } from '@angular/material';
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
@@ -12,6 +13,8 @@ const SHARED_MODULES: any[] = [
   HttpModule,
   FormsModule,
   RouterModule,
+  MdListModule,
+  MdIconModule
 ];
 
 /**

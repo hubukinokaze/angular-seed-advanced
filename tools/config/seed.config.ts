@@ -428,6 +428,22 @@ export class SeedConfig {
     paths: {
       [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
       '@angular/animations': 'node_modules/@angular/animations/bundles/animations.umd.js',
+      '@angular/cdk': 'node_modules/@angular/cdk/bundles/cdk.umd.js',
+      '@angular/cdk/a11y': 'node_modules/@angular/cdk/bundles/cdk-a11y.umd.js',
+      '@angular/cdk/bidi': 'node_modules/@angular/cdk/bundles/cdk-bidi.umd.js',
+      '@angular/cdk/coercion': 'node_modules/@angular/cdk/bundles/cdk-coercion.umd.js',
+      '@angular/cdk/collections': 'node_modules/@angular/cdk/bundles/cdk-collections.umd.js',
+      '@angular/cdk/keycodes': 'node_modules/@angular/cdk/bundles/cdk-keycodes.umd.js',
+      '@angular/cdk/observers': 'node_modules/@angular/cdk/bundles/cdk-observers.umd.js',
+      '@angular/cdk/overlay': 'node_modules/@angular/cdk/bundles/cdk-overlay.umd.js',
+      '@angular/cdk/platform': 'node_modules/@angular/cdk/bundles/cdk-platform.umd.js',
+      '@angular/cdk/portal': 'node_modules/@angular/cdk/bundles/cdk-portal.umd.js',
+      '@angular/cdk/rxjs': 'node_modules/@angular/cdk/bundles/cdk-rxjs.umd.js',
+      '@angular/cdk/scrolling': 'node_modules/@angular/cdk/bundles/cdk-scrolling.umd.js',
+      '@angular/cdk/stepper': 'node_modules/@angular/cdk/bundles/cdk-stepper.umd.js',
+      '@angular/cdk/table': 'node_modules/@angular/cdk/bundles/cdk-table.umd.js',
+      '@angular/cdk/typings': 'node_modules/@angular/cdk/bundles/cdk-typings.umd.js',
+      '@angular/material':'node_modules/@angular/material/bundles/material.umd.js',
       '@angular/platform-browser/animations': 'node_modules/@angular/platform-browser/bundles/platform-browser-animations.umd.js',
       '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'node_modules/@angular/compiler/bundles/compiler.umd.js',
@@ -494,6 +510,14 @@ export class SeedConfig {
     packages: {
       '@angular/animations': {
         main: 'bundles/animations.umd.js',
+        defaultExtension: 'js'
+      },
+      '@angular/cdk': {
+        main: 'bundles/cdk.umd.js',
+        defaultExtension: 'js'
+      },
+      '@angular/material': {
+        main: 'bundles/material.umd.js',
         defaultExtension: 'js'
       },
       '@angular/common': {
