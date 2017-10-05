@@ -70,7 +70,7 @@ button {
 }
 
 button:hover {
-  background-color: $secondary;
+  background-color: $primary;
 }
 
 /* platform specific */
@@ -82,4 +82,10 @@ button:hover {
   sd-navbar {
     display: none !important;
   }
+}
+
+hr.style1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(250, 181, 126, 0), rgba(140,45,49, 0.75), rgba(250, 181, 126, 0));
 }

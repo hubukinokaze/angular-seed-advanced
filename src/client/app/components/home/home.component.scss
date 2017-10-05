@@ -9,6 +9,10 @@ h1, h3 {
   margin: auto;
 }
 
+h3 > a {
+  font-size: 20px;
+}
+
 a:link, a:visited {
   color: $primary;
   text-decoration: none;
@@ -26,6 +30,10 @@ a:hover {
 
   div.list-container {
     min-width: 280px !important;
+  }
+
+  h3 > a {
+    font-size: inherit;
   }
 }
 
