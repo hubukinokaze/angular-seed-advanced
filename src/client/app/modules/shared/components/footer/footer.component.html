@@ -1,27 +1,36 @@
 <div class="toolbar-container">
   <div class="top-row">
-    <!--<span class="spacer"></span>-->
     <md-list>
       <h2>Quick Links</h2>
-      <md-list-item><a href="#">Home</a></md-list-item>
-      <md-list-item><a href="#">Novel</a></md-list-item>
-      <md-list-item><a href="#">Art</a></md-list-item>
-      <md-list-item><a href="#">Manga</a></md-list-item>
-      <md-list-item><a href="#">About</a></md-list-item>
+      <md-list-item><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Home</a></md-list-item>
+      <md-list-item><a [routerLink]="['/novel']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Novel</a></md-list-item>
+      <md-list-item><a [routerLink]="['/art']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Art</a></md-list-item>
+      <md-list-item><a [routerLink]="['/manga']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Manga</a></md-list-item>
+      <md-list-item><a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">About</a></md-list-item>
     </md-list>
-    <!--<span class="spacer"></span>-->
+
     <md-list>
       <h2>Donate</h2>
       <md-list-item><a href="#">Patreon</a></md-list-item>
       <md-list-item><a href="#">PayPal</a></md-list-item>
     </md-list>
-    <!--<span class="spacer"></span>-->
+
     <md-list>
-      <h2>Connect</h2>
+      <h2>Network</h2>
       <md-list-item><a href="#">Facebook</a></md-list-item>
       <md-list-item><a href="#">Twitter</a></md-list-item>
     </md-list>
-    <!--<span class="spacer"></span>-->
+
+    <md-list>
+      <h2>Download</h2>
+      <md-list-item><a href="#">Android App</a></md-list-item>
+      <md-list-item><a href="#">Desktop App</a></md-list-item>
+    </md-list>
+
+    <md-list>
+      <h2>Affiliate</h2>
+      <md-list-item><a href="#">Humide</a></md-list-item>
+    </md-list>
   </div>
   <div class="bottom-row">
     <h5>© 2017 HikiNEETO's Life | All rights reserved</h5>
