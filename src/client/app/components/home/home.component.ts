@@ -33,7 +33,11 @@ export class HomeComponent implements OnInit {
         icon: 'book',
         title: 'Chapter 284: The Grand Battle between Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Had to at least finish the fight, so here it is. ' +
+        'One of the clear weak points of the body, the head. ' +
+        'Moreover, he was pierced right in between his brows, and yet, ' +
+        'he counterattacked in a matter of seconds. ' +
+        'This is already an enemy that I can’t consider a human as I...',
         date: 'Oct. 4, 2017',
         cover: 'Cover Image'
       },
@@ -41,7 +45,9 @@ export class HomeComponent implements OnInit {
         icon: 'book',
         title: 'Chapter 283: The Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Had to at least finish the fight, so here it is. ' +
+        'One of the clear weak points of the body, the head. ' +
+        'Moreover, he was pierced right...',
         date: 'Oct. 3, 2017',
         cover: 'Cover Image'
       },
@@ -84,7 +90,9 @@ export class HomeComponent implements OnInit {
         icon: 'color_lens',
         title: 'Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Had to at least finish the fight, so here it is. ' +
+        'One of the clear weak points of the body, the head. ' +
+        'Moreover, he was pierced right in between his brows, and yet... ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
       }
@@ -119,7 +127,10 @@ export class HomeComponent implements OnInit {
         icon: 'dashboard',
         title: 'Chapter 282: Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Had to at least finish the fight, so here it is. ' +
+        'One of the clear weak points of the body, the head. ' +
+        'Moreover, he was pierced right in between his brows, and yet, ' +
+        'he counterattacked in a matter... ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
       }
