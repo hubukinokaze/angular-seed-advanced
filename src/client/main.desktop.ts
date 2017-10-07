@@ -58,22 +58,6 @@ app.on('ready', () => {
 
   let appTitle: string = `HikiNEETO's Life`;
 
-  let langMenu: any = {
-    label: 'Language',
-    submenu: []
-  };
-  for (var lang of DesktopConfig.GET_SUPPORTED_LANGUAGES()) {
-    let code = lang.code;
-    let langOption = {
-      label: lang.title,
-      click:() => {
-        console.log(`Change lang: ${code}`);
-        mainWindow.webContents.executeJavaScript(`window.dispatchEvent(new CustomEvent('changeLang', {detail: { value: '${code}'} }));`);
-      }
-    };
-    langMenu.submenu.push(langOption);
-  }
-
   let helpMenu: any = {
     label: 'Help',
     submenu: [{
@@ -200,7 +184,6 @@ app.on('ready', () => {
             selector: 'arrangeInFront:'
           }]
       },
-      langMenu,
       helpMenu];
 
     menu = Menu.buildFromTemplate(template);
@@ -246,7 +229,6 @@ app.on('ready', () => {
             }
           }]
       },
-      langMenu,
       helpMenu];
     menu = Menu.buildFromTemplate(template);
     mainWindow.setMenu(menu);

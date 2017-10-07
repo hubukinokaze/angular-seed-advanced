@@ -11,7 +11,7 @@
       "version": "3.1.0"
     },
     "tns-android": {
-      "version": "3.1.1"
+      "version": "3.2.0"
     }
   },
   "license": "MIT",
@@ -20,6 +20,7 @@
     "clean": "rimraf platforms node_modules lib hooks app && mkdirp app",
     "ns-bundle": "ns-bundle",
     "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
+    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install",
     "start-android-bundle": "npm run ns-bundle --android --run-app",
     "start-ios-bundle": "npm run ns-bundle --ios --run-app",
     "build-android-bundle": "npm run ns-bundle --android --build-app",
@@ -27,19 +28,19 @@
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
-    "@angular/cdk": "^2.0.0-beta.11",
+    "@angular/cdk": "2.0.0-beta.11",
     "@angular/common": "^4.4.4",
     "@angular/compiler": "^4.4.4",
     "@angular/compiler-cli": "^4.4.4",
     "@angular/core": "^4.4.4",
     "@angular/forms": "^4.4.4",
     "@angular/http": "^4.4.4",
-    "@angular/material": "^2.0.0-beta.11",
+    "@angular/material": "2.0.0-beta.11",
     "@angular/platform-browser": "^4.4.4",
     "@angular/router": "^4.4.4",
     "angulartics2": "^2.4.0",
     "lodash": "^4.17.4",
-    "nativescript-angular": "^4.2.0",
+    "nativescript-angular": "^4.3.0-2017-10-6-2",
     "nativescript-localstorage": "^1.1.5",
     "nativescript-theme-core": "^1.0.4",
     "reflect-metadata": "^0.1.10",
@@ -55,7 +56,7 @@
     "babel-traverse": "6.11.4",
     "babel-types": "6.11.1",
     "babylon": "6.8.4",
-    "codelyzer": "^3.0.1",
+    "codelyzer": "^3.2.1",
     "copy-webpack-plugin": "~4.0.1",
     "extract-text-webpack-plugin": "~2.1.0",
     "fs-extra": "^0.30.0",
@@ -64,15 +65,19 @@
     "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-android-snapshot": "^0.0.9",
     "nativescript-dev-sass": "^1.1.1",
-    "nativescript-dev-webpack": "^0.6.0",
+    "nativescript-dev-webpack": "0.7.1",
     "opener": "^1.4.1",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.0.2",
     "rimraf": "^2.5.3",
     "tar.gz": "^1.0.5",
-    "tns-platform-declarations": "^3.0.1",
+    "tns-platform-declarations": "^3.2.0",
     "tslint": "^5.7.0",
     "webpack": "~2.5.1",
-    "webpack-sources": "~0.2.3"
+    "webpack-sources": "~0.2.3",
+    "webpack-bundle-analyzer": "^2.8.2",
+    "nativescript-worker-loader": "~0.8.1",
+    "@angular/compiler-cli": "^4.4.4",
+    "typescript": "2.3.3"
   }
 }

@@ -31,10 +31,10 @@ const SHARED_MODULES: any[] = [
 
 @NgModule({
   imports: [
-    ...SHARED_MODULES
+    ...SHARED_MODULES,
   ],
   declarations: [
-    ...SHARED_COMPONENTS
+    ...SHARED_COMPONENTS,
   ],
   schemas: [
     NO_ERRORS_SCHEMA,

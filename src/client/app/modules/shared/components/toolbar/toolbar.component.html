@@ -1,12 +1,11 @@
 <div class="toolbar-container">
   <h1><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HikiNEETO's Life</a></h1>
   <span class="spacer"></span>
-  <span>
+
     <button md-icon-button [mdMenuTriggerFor]="menu">
       <md-icon>more_vert</md-icon>
     </button>
-  </span>
-  <md-menu #menu="mdMenu">
+  <md-menu x-position="before" y-position="above" #menu="mdMenu">
     <button md-menu-item [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
       <md-icon>home</md-icon>
       <span>Home</span>

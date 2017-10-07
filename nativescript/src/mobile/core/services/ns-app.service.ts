@@ -12,17 +12,12 @@ if (isIOS) {
   */
 }
 
-// libs
-import { Store } from '@ngrx/store';
-import { TranslateService } from '@ngx-translate/core';
-
 // app
 import { AppService } from '../../../app/modules/core/services/app.service';
 import { Config } from '../../../app/modules/core/utils';
 import { LogService, WindowService, RouterExtensions } from '../../../app/modules/core/index';
 import { AnalyticsService } from '../../../app/modules/analytics/index';
 import { ActionBarUtil } from '../utils/actionbar.util';
-import * as multilingual from '../../../app/modules/i18n/index';
 
 declare var android: any;
 
@@ -35,17 +30,13 @@ export class NSAppService extends AppService {
   // Since @Component decorator is not used here, this ensures metadata will be generated
   constructor(public analytics: AnalyticsService,
               public log: LogService,
-              public store: Store<any>,
               public router: Router,
               public locationstrategy: NSLocationStrategy,
-              public translate: TranslateService,
               public window: WindowService
   ) {
     super(analytics, log);
 
     this.log.debug('NSAppService constructor');
-
-    store.dispatch(new multilingual.ChangeAction(window.navigator.language.substr(0, 2)));
 
     // translate.onLangChange.skip(1).subscribe((args) => {
     //   this.log.info(`NSAppComponent translate.onLangChange(${args.lang})`);

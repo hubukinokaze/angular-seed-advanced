@@ -21,9 +21,6 @@ import { routes } from './app/components/app.routes';
 
 // feature modules
 import { CoreModule } from './app/modules/core/core.module';
-import { AppReducer } from './app/modules/ngrx/index';
-import { MultilingualEffects } from './app/modules/i18n/index';
-import { SampleEffects } from './app/modules/sample/index';
 import { ComponentsModule, cons, consoleLogTarget } from './components.module';
 
 // {N} custom app specific
@@ -44,20 +41,6 @@ Config.PLATFORM_TARGET = Config.PLATFORMS.MOBILE_NATIVE;
 // (optional) log level - defaults to no logging if not set
 Config.DEBUG.LEVEL_4 = true;
 
-import { Languages, LanguageViewHelper } from './app/modules/i18n/index';
-
-// helper for SegmentedBar view bindings in lang-switcher shared component
-export function segmentViewHelper(languages) {
-  let segmentItems = [];
-  for (let lang of languages) {
-    // {N} requires items to be SegmentedBarItem class
-    let item = new SegmentedBarItem();
-    item.title = lang.title;
-    (<any>item).code = lang.code;
-    segmentItems.push(item);
-  }
-  return segmentItems;
-}
 
 @NgModule({
   imports: [
@@ -73,10 +56,7 @@ export function segmentViewHelper(languages) {
   providers: [
     NS_ANALYTICS_PROVIDERS,
     { provide: RouterExtensions, useClass: TNSRouterExtensions },
-    { provide: AppService, useClass: NSAppService },
-    // i18n
-    { provide: Languages, useValue: Config.GET_SUPPORTED_LANGUAGES() },
-    { provide: LanguageViewHelper, deps: [Languages], useFactory: (segmentViewHelper) }
+    { provide: AppService, useClass: NSAppService }
   ],
   schemas: [
     NO_ERRORS_SCHEMA,

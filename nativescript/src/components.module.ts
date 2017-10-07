@@ -8,21 +8,16 @@ import { Http } from '@angular/http';
 // angular
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
-// libs
-import { TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 // app
 import { AppComponent } from './app/components/app.component';
 import { AboutComponent } from './app/components/about/about.component';
 import { HomeComponent } from './app/components/home/home.component';
+import { NovelComponent } from './app/components/novel/novel.component';
 import { routes } from './app/components/app.routes';
 
 // feature modules
 import { CoreModule } from './app/modules/core/core.module';
 import { AnalyticsModule } from './app/modules/analytics/analytics.module';
-import { MultilingualModule, translateLoaderFactory } from './app/modules/i18n/multilingual.module';
-import { SampleModule } from './app/modules/sample/sample.module';
 import { ConsoleService, ConsoleTarget, LogLevel } from './app/modules/core/index';
 
 // intermediate component module
@@ -32,12 +27,6 @@ import { ConsoleService, ConsoleTarget, LogLevel } from './app/modules/core/inde
   imports: [
     AnalyticsModule,
     CoreModule,
-    MultilingualModule.forRoot([{
-      provide: TranslateLoader,
-      deps: [Http],
-      useFactory: (translateLoaderFactory)
-    }]),
-    SampleModule,
     NativeScriptModule,
     NativeScriptFormsModule,
     NativeScriptHttpModule,
@@ -46,18 +35,17 @@ import { ConsoleService, ConsoleTarget, LogLevel } from './app/modules/core/inde
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    NovelComponent,
   ],
   schemas: [
     NO_ERRORS_SCHEMA,
     CUSTOM_ELEMENTS_SCHEMA
   ],
   exports: [
-    MultilingualModule,
     AppComponent,
     AnalyticsModule,
     CoreModule,
-    SampleModule,
     NativeScriptModule,
     NativeScriptFormsModule,
     NativeScriptHttpModule,

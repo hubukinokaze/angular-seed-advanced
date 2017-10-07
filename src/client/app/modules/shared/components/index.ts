@@ -5,7 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 export const SHARED_COMPONENTS: any[] = [
   NavbarComponent,
   ToolbarComponent,
-  FooterComponent
+  FooterComponent,
 ];
 
 export * from './navbar/navbar.component';
