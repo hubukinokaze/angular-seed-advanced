@@ -4,7 +4,7 @@
   background-color: $primary;
   color: $deckled-edge;
   display: block;
-  height: 48px;
+  height: 100%;
   padding: 0 16px;
   position: relative;
 }
@@ -24,6 +24,10 @@ h1 {
   font-size: 20px;
   font-weight: normal;
   letter-spacing: 0.1px;
+}
+
+span > button {
+  height: 100%;
 }
 
 button > span {
