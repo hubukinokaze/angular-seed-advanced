@@ -25,7 +25,7 @@ body {
 
 /* Set up a default font and some padding to provide breathing room */
 body {
-  font-family: 'Gentium Basic';
+  font-family: Gentium Basic, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,10 +73,6 @@ button:hover {
   background-color: $secondary;
 }
 
-/* platform specific */
-.desktop lang-switcher {
-  display: none;
-}
 
 @media all and (max-width: 500px) {
   sd-navbar {

@@ -1,13 +1,13 @@
 @import '../../../scss/variables';
 
 :host {
-  font-family: 'Gentium Basic';
+  font-family: Gentium Basic, sans-serif;
   display: block;
   padding: 0 16px;
 }
 
 h1 {
-  font-family: Cinzel;
+  font-family: Cinzel, sans-serif;
   margin: auto;
   font-size: 40px;
   letter-spacing: 5px;
@@ -19,7 +19,7 @@ h1 {
 }
 
 h3, p, a {
-  font-family: 'Gentium Basic';
+  font-family: Gentium Basic, sans-serif;
   margin: auto;
 }
 
