@@ -1,6 +1,7 @@
 @import '../../../../../scss/variables';
 
 :host {
+  font-family: 'Gentium Basic';
   background-color: $primary;
   color: $deckled-edge;
   display: block;
@@ -26,6 +27,7 @@ a {
   font-weight: normal;
   letter-spacing: 0.1px;
   text-decoration: none;
+  font-family: 'Gentium Basic';
 }
 
 a:hover {

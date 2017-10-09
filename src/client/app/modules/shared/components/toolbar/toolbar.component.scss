@@ -1,6 +1,7 @@
 @import '../../../../../scss/variables';
 
 :host {
+  font-family: 'Gentium Basic';
   background-color: $primary;
   color: $deckled-edge;
   display: block;
@@ -18,7 +19,11 @@
   flex-grow: 1;
 }
 
-h1, h1 > a{
+span {
+  font-family: 'Gentium Basic';
+}
+
+h1, h1 > a {
   color: $deckled-edge;
   display: inline;
   font-size: 20px;

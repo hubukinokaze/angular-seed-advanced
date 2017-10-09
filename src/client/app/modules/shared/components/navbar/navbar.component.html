@@ -1,9 +1,19 @@
 <nav>
-  <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'HOME'}}</a>
-  <a [routerLink]="['/novel']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'NOVEL'}}</a>
-  <a [routerLink]="['/art']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'ART'}}</a>
-  <a [routerLink]="['/manga']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'MANGA'}}</a>
-  <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'ABOUT'}}</a>
+  <span (mouseenter)="navSelect[0] = navSelect[0] * -1" (mouseleave)="navSelect[0] = navSelect[0] * -1" [@highlight]="navSelect">
+    <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'HOME'}}</a>
+  </span>
+  <span (mouseenter)="navSelect[1] = navSelect[1] * -1" (mouseleave)="navSelect[0] = navSelect[0] * -1" [@highlight]="navSelect">
+    <a [routerLink]="['/novel']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'NOVEL'}}</a>
+  </span>
+  <span (mouseenter)="navSelect[2] = navSelect[2] * -1" (mouseleave)="navSelect[0] = navSelect[0] * -1" [@highlight]="navSelect">
+    <a [routerLink]="['/art']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'ART'}}</a>
+  </span>
+  <span (mouseenter)="navSelect[3] = navSelect[3] * -1" (mouseleave)="navSelect[0] = navSelect[0] * -1" [@highlight]="navSelect">
+    <a [routerLink]="['/manga']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'MANGA'}}</a>
+  </span>
+  <span (mouseenter)="navSelect[4] = navSelect[4] * -1" (mouseleave)="navSelect[0] = navSelect[0] * -1" [@highlight]="navSelect">
+    <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{'ABOUT'}}</a>
+  </span>
 </nav>
 
 

@@ -7,8 +7,8 @@
         <md-list-item *ngFor="let novel of novelList">
           <md-icon md-list-icon>{{ novel.icon }}</md-icon>
           <h3 md-line><a href="#">{{ novel.title }}</a></h3>
-          <p md-line>{{ novel.author }}</p>
-          <p md-line>{{ novel.date }}</p>
+          <p md-line class="font-20">{{ novel.author }}</p>
+          <p md-line class="font-20">{{ novel.date }}</p>
           <p md-line class="description">{{ novel.description }}</p>
         </md-list-item>
       </md-list>
