@@ -12,14 +12,30 @@ import { trigger,style,transition,animate,keyframes,query,stagger,state } from '
   ],
   animations: [
     trigger('highlight', [
-      state('1, void', style({borderBottom: 'none'})),
-      state('-1', style({borderBottom: 'thick solid #3F354D'})),
+      state('1, void', style({borderColor: 'white'})),
+      state('-1', style({borderColor: '#3F354D',})),
       transition(
-        'collapsed <=> expanded', [animate(500, style({height: '250px'})), animate(500)])
+        '1 <=> -1', [animate(220, style({})), animate(220)])
     ]),
   ]
 })
+
 export class NavbarComponent {
+  public links: any[];
   public navSelect: any[];
-  constructor(){this.navSelect = [1, 1, 1, 1, 1];}
+
+  constructor() {
+    this.links = [
+      {link: '', name: 'HOME'},
+      {link: 'novel', name: 'NOVEL'},
+      {link: 'art', name: 'ART'},
+      {link: 'manga', name: 'MANGA'},
+      {link: 'about', name: 'ABOUT'}
+    ];
+    this.navSelect = [1, 1, 1, 1, 1];
+  }
+
+  public switcher(i) {
+    this.navSelect[i] = (this.navSelect[i] === 1 ? -1 : 1);
+  }
 }

@@ -12,11 +12,13 @@ nav a {
   color: $lap-pool-blue;
   font-size: 14px;
   font-weight: 600;
-  line-height: 48px;
-  margin-right: 20px;
+  line-height: 40px;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
+  padding: 12px;
+  border-bottom: thick solid white;
+  text-transform: uppercase;
 }
 
 nav a.router-link-active {
