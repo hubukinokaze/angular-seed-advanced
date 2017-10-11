@@ -33,11 +33,9 @@ export class HomeComponent implements OnInit {
         icon: 'book',
         title: 'Chapter 284: The Grand Battle between Monsters',
         author: 'Reigokai',
-        description: 'Had to at least finish the fight, so here it is. ' +
-        'One of the clear weak points of the body, the head. ' +
-        'Moreover, he was pierced right in between his brows, and yet, ' +
-        'he counterattacked in a matter of seconds. ' +
-        'This is already an enemy that I can’t consider a human as I...',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
         cover: 'Cover Image'
       },
@@ -45,9 +43,9 @@ export class HomeComponent implements OnInit {
         icon: 'book',
         title: 'Chapter 283: The Monsters',
         author: 'Reigokai',
-        description: 'Had to at least finish the fight, so here it is. ' +
-        'One of the clear weak points of the body, the head. ' +
-        'Moreover, he was pierced right...',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
         cover: 'Cover Image'
       },
@@ -55,7 +53,9 @@ export class HomeComponent implements OnInit {
         icon: 'book',
         title: 'Chapter 282: Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
       }
@@ -74,7 +74,9 @@ export class HomeComponent implements OnInit {
         icon: 'color_lens',
         title: 'The Grand Battle between Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
         cover: 'Cover Image'
       },
@@ -82,7 +84,9 @@ export class HomeComponent implements OnInit {
         icon: 'color_lens',
         title: 'The Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
         cover: 'Cover Image'
       },
@@ -90,9 +94,9 @@ export class HomeComponent implements OnInit {
         icon: 'color_lens',
         title: 'Monsters',
         author: 'Reigokai',
-        description: 'Had to at least finish the fight, so here it is. ' +
-        'One of the clear weak points of the body, the head. ' +
-        'Moreover, he was pierced right in between his brows, and yet... ',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
       }
@@ -111,7 +115,9 @@ export class HomeComponent implements OnInit {
         icon: 'dashboard',
         title: 'Chapter 284: The Grand Battle between Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
         cover: 'Cover Image'
       },
@@ -119,7 +125,9 @@ export class HomeComponent implements OnInit {
         icon: 'dashboard',
         title: 'Chapter 283: The Monsters',
         author: 'Reigokai',
-        description: 'Description',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
         cover: 'Cover Image'
       },
@@ -127,10 +135,9 @@ export class HomeComponent implements OnInit {
         icon: 'dashboard',
         title: 'Chapter 282: Monsters',
         author: 'Reigokai',
-        description: 'Had to at least finish the fight, so here it is. ' +
-        'One of the clear weak points of the body, the head. ' +
-        'Moreover, he was pierced right in between his brows, and yet, ' +
-        'he counterattacked in a matter... ',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
       }

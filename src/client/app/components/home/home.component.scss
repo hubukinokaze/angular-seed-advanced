@@ -121,6 +121,9 @@ p[md-line].description {
   white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
   white-space: normal;
   text-align: justify;
+  line-height: 1.5em;
+  height: 5em;       /* height is 2x line-height, so two lines will display */
+  overflow: hidden;
 }
 
 md-icon[md-list-avatar].media-img, md-icon[md-list-avatar].media-img > img {
