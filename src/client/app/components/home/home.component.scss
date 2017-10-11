@@ -57,6 +57,16 @@ a:hover {
   text-decoration: underline;
 }
 
+/deep/ .mat-tab-label{
+  font-size: 20px;
+  font-family: Gentium Basic, sans-serif;
+}
+
+/deep/ .mat-ink-bar {
+  background-color: $alert !important;
+  min-width: 80px;
+}
+
 @media all and (max-width: 500px) {
   body.home-body {
     width: 100% !important;
@@ -98,13 +108,14 @@ body.home-body {
 
 div.list-group {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
 }
 
 div.list-container {
   min-width: 350px;
-  width: 65%;
+  width: 100%;
+
 }
 
 md-icon {

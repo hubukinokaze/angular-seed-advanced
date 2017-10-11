@@ -1,48 +1,64 @@
 <body class="home-body">
-  <h1>The portal to all your needs</h1>
-  <div class="list-group">
+<h1>The portal to all your needs</h1>
+<md-tab-group dynamicHeight class="home-tabs">
+  <md-tab label="Releases">
+    <div class="list-group">
+      <div class="list-container">
+        <md-list>
+          <h2 md-subheader>Recent Novel</h2>
+          <md-list-item *ngFor="let novel of novelList">
+            <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image_2.png"/></md-icon>
+            <h3 md-line><a href="#">{{ novel.title }}</a></h3>
+            <p md-line class="description">{{ novel.description }}</p>
+            <p md-line><md-icon md-list-icon>{{ novel.icon }}</md-icon> {{ novel.author }} | {{ novel.date }}</p>
+            <p md-line></p>
+          </md-list-item>
+        </md-list>
+        <hr class="style1"/>
+      </div>
+      <div class="list-container">
+        <md-list>
+          <h2 md-subheader>Recent Art</h2>
+          <md-list-item *ngFor="let art of artList">
+            <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image_1.png"/></md-icon>
+            <h3 md-line><a href="#">{{ art.title }}</a></h3>
+            <p md-line class="description">{{ art.description }}</p>
+            <p md-line><md-icon md-list-icon>{{ art.icon }}</md-icon>{{ art.author }} | {{ art.date }}</p>
+            <p md-line></p>
+          </md-list-item>
+        </md-list>
+        <hr class="style1"/>
+      </div>
+      <div class="list-container">
+        <md-list>
+          <h2 md-subheader>Recent Manga</h2>
+          <md-list-item *ngFor="let manga of mangaList">
+            <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image.png"/></md-icon>
+            <h3 md-line><a href="#">{{ manga.title }}</a></h3>
+            <p md-line class="description">{{ manga.description }}</p>
+            <p md-line><md-icon md-list-icon>{{ manga.icon }}</md-icon>{{ manga.author }} | {{ manga.date }}</p>
+            <p md-line></p>
+          </md-list-item>
+        </md-list>
+        <hr class="style1"/>
+      </div>
+      <div class="list-container">
+      </div>
+    </div>
+  </md-tab>
+  <md-tab label="News">
     <div class="list-container">
       <md-list>
-        <h2 md-subheader>Recent Novel</h2>
-        <md-list-item *ngFor="let novel of novelList">
-          <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image_2.png"/></md-icon>
-          <h3 md-line><a href="#">{{ novel.title }}</a></h3>
-          <p md-line class="description">{{ novel.description }}</p>
-          <p md-line><md-icon md-list-icon>{{ novel.icon }}</md-icon> {{ novel.author }} | {{ novel.date }}</p>
-          <p md-line></p>
+        <md-list-item *ngFor="let news of newsList">
+          <h3 md-line><a href="#">{{ news.title }}</a></h3>
+          <p md-line class="description">{{ news.description }}</p>
+          <p md-line>{{ news.author }}</p>
+          <p md-line>{{ news.date }}</p>
         </md-list-item>
       </md-list>
-      <hr class="style1"/>
     </div>
-    <div class="list-container">
-      <md-list>
-        <h2 md-subheader>Recent Art</h2>
-        <md-list-item *ngFor="let art of artList">
-          <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image_1.png"/></md-icon>
-          <h3 md-line><a href="#">{{ art.title }}</a></h3>
-          <p md-line class="description">{{ art.description }}</p>
-          <p md-line><md-icon md-list-icon>{{ art.icon }}</md-icon>{{ art.author }} | {{ art.date }}</p>
-          <p md-line></p>
-        </md-list-item>
-      </md-list>
-      <hr class="style1"/>
-    </div>
-    <div class="list-container">
-      <md-list>
-        <h2 md-subheader>Recent Manga</h2>
-        <md-list-item *ngFor="let manga of mangaList">
-          <md-icon md-list-avatar class="media-img"><img src="../../../assets/img/no_image.png"/></md-icon>
-          <h3 md-line><a href="#">{{ manga.title }}</a></h3>
-          <p md-line class="description">{{ manga.description }}</p>
-          <p md-line><md-icon md-list-icon>{{ manga.icon }}</md-icon>{{ manga.author }} | {{ manga.date }}</p>
-          <p md-line></p>
-        </md-list-item>
-      </md-list>
-      <hr class="style1"/>
-    </div>
-    <div class="list-container">
-    </div>
-  </div>
+  </md-tab>
+</md-tab-group>
 </body>
 
 <!--<form (submit)="addName()">-->

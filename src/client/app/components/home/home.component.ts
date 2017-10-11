@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   public novelList: any;
   public artList: any;
   public mangaList: any;
+  public newsList: any;
 
   constructor(public routerext: RouterExtensions) {}
 
@@ -140,6 +141,33 @@ export class HomeComponent implements OnInit {
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
         cover: 'Cover Image'
+      }
+    ];
+
+    this.newsList = [
+      {
+        title: 'The Grand Battle between Monsters',
+        author: 'Reigokai',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
+        date: 'Oct. 4, 2017'
+      },
+      {
+        title: 'The Monsters',
+        author: 'Reigokai',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
+        date: 'Oct. 3, 2017'
+      },
+      {
+        title: 'Monsters',
+        author: 'Reigokai',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
+        date: 'Oct. 2, 2017'
       }
     ];
   }

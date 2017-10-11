@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdProgressSpinnerModule } from '@angular/material';
+import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule } from '@angular/material';
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
@@ -19,7 +19,7 @@ const SHARED_MODULES: any[] = [
   MdIconModule,
   MdMenuModule,
   MdButtonModule,
-  MdProgressSpinnerModule
+  MdTabsModule
 ];
 
 /**
