@@ -106,7 +106,7 @@
     "@types/run-sequence": "^0.0.29",
     "@types/selenium-webdriver": "^3.0.3",
     "@types/systemjs": "^0.19.31",
-    "@types/yargs": "^6.5.0",
+    "@types/yargs": "^6.6.0",
     "@types/zone.js": "^0.5.12",
     "angulartics2": "^2.4.0",
     "async": "^2.1.1",

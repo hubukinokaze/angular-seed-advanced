@@ -46,8 +46,8 @@ export class NavbarComponent {
       width: '60%'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    // });
   }
 }
 
