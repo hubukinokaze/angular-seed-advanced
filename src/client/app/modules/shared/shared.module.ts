@@ -1,10 +1,10 @@
 import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule } from '@angular/material';
+import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule, MdDialogModule, MdFormFieldModule, MdInputModule } from '@angular/material';
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
@@ -13,13 +13,17 @@ const SHARED_MODULES: any[] = [
   CommonModule,
   HttpModule,
   FormsModule,
+  ReactiveFormsModule,
   RouterModule,
   BrowserAnimationsModule,
   MdListModule,
   MdIconModule,
   MdMenuModule,
   MdButtonModule,
-  MdTabsModule
+  MdTabsModule,
+  MdDialogModule,
+  MdFormFieldModule,
+  MdInputModule
 ];
 
 /**
@@ -42,6 +46,9 @@ const SHARED_MODULES: any[] = [
   ],
   exports: [
     ...SHARED_MODULES,
+    ...SHARED_COMPONENTS,
+  ],
+  entryComponents: [
     ...SHARED_COMPONENTS,
   ]
 })

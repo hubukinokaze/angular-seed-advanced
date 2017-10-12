@@ -8,6 +8,11 @@
   padding: 0 16px;
 }
 
+nav.nav-container {
+  display: flex;
+  flex-flow: row;
+}
+
 nav a {
   color: $lap-pool-blue;
   font-size: 16px;
@@ -25,3 +30,6 @@ nav a.router-link-active {
   color: $primary;
 }
 
+.spacer {
+  flex-grow: 1;
+}

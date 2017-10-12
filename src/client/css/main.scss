@@ -85,3 +85,47 @@ hr.style1 {
   height: 1px;
   background-image: linear-gradient(to right, rgba(250, 181, 126, 0), rgba(140,45,49, 0.75), rgba(250, 181, 126, 0));
 }
+
+.mat-form-field {
+  font-family: Gentium Basic, sans-serif;
+  color: $primary;
+}
+
+.mat-form-field .mat-input-infix .mat-form-field-placeholder {
+  font-family: Gentium Basic, sans-serif;
+  color: $primary;
+}
+
+.mat-focused .mat-form-field-placeholder {
+  font-family: Gentium Basic, sans-serif;
+  color: $alert;
+
+  &.mat-accent {
+    color: $secondary;
+  }
+
+  &.mat-warn {
+    color: $alert;
+  }
+}
+
+.mat-form-field-ripple {
+  background-color: $primary !important;
+
+  &.mat-accent {
+    background-color: $secondary !important;
+  }
+
+  &.mat-warn {
+    background-color: $alert !important;
+  }
+}
+
+
+button[md-raised-button] {
+  font-family: Gentium Basic, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  background-color: $lap-pool-blue !important;
+}
