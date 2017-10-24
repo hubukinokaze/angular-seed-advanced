@@ -12,13 +12,15 @@ import { RouterExtensions, Config } from '../../modules/core/index';
   styleUrls: ['home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public names$: Observable<any>;
   public novelList: any;
   public artList: any;
   public mangaList: any;
   public newsList: any;
+  public tabSelectedIndex: number;
 
-  constructor(public routerext: RouterExtensions) {}
+  constructor(public routerext: RouterExtensions) {
+    this.tabSelectedIndex = 0;
+  }
 
   ngOnInit() {
     this.novelList = [
@@ -28,7 +30,8 @@ export class HomeComponent implements OnInit {
         author: 'Author',
         description: 'Description',
         date: 'Date',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'novel'
       },
       {
         icon: 'book',
@@ -38,7 +41,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'novel'
       },
       {
         icon: 'book',
@@ -48,7 +52,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'novel'
       },
       {
         icon: 'book',
@@ -58,7 +63,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'novel'
       }
     ];
 
@@ -69,7 +75,8 @@ export class HomeComponent implements OnInit {
         author: 'Author',
         description: 'Description',
         date: 'Date',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'art'
       },
       {
         icon: 'color_lens',
@@ -79,7 +86,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'art'
       },
       {
         icon: 'color_lens',
@@ -89,7 +97,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'art'
       },
       {
         icon: 'color_lens',
@@ -99,7 +108,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'art'
       }
     ];
 
@@ -110,7 +120,8 @@ export class HomeComponent implements OnInit {
         author: 'Author',
         description: 'Description',
         date: 'Date',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'manga'
       },
       {
         icon: 'dashboard',
@@ -120,7 +131,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 4, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'manga'
       },
       {
         icon: 'dashboard',
@@ -130,7 +142,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 3, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'manga'
       },
       {
         icon: 'dashboard',
@@ -140,7 +153,8 @@ export class HomeComponent implements OnInit {
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         date: 'Oct. 2, 2017',
-        cover: 'Cover Image'
+        cover: 'Cover Image',
+        type: 'manga'
       }
     ];
 
@@ -151,7 +165,8 @@ export class HomeComponent implements OnInit {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
-        date: 'Oct. 4, 2017'
+        date: 'Oct. 4, 2017',
+        type: 'news'
       },
       {
         title: 'The Monsters',
@@ -159,7 +174,8 @@ export class HomeComponent implements OnInit {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
-        date: 'Oct. 3, 2017'
+        date: 'Oct. 3, 2017',
+        type: 'news'
       },
       {
         title: 'Monsters',
@@ -167,20 +183,10 @@ export class HomeComponent implements OnInit {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
         'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
         'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
-        date: 'Oct. 2, 2017'
+        date: 'Oct. 2, 2017',
+        type: 'news'
       }
     ];
   }
-
-
-  // readAbout() {
-  //   // Try this in the {N} app
-  //   // {N} can use these animation options
-  //   this.routerext.navigate(['/about'], {
-  //     transition: {
-  //       duration: 1000,
-  //       name: 'slideTop',
-  //     }
-  //   });
-  // }
+  
 }

@@ -1,9 +1,10 @@
 // app
-import { Component, Inject} from '@angular/core';
+import { Component } from '@angular/core';
 import { SharedModule } from '../../shared.module';
-import { trigger,style,transition,animate,keyframes,query,stagger,state } from '@angular/animations';
+import { trigger,style,transition,animate,state } from '@angular/animations';
 import { MdDialog, MdDialogRef } from '@angular/material';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -64,20 +65,27 @@ export class LoginComponent {
   public emailFormControl: any;
 
   constructor(
-    public dialogRef: MdDialogRef<LoginComponent>) {
+    public dialogRef: MdDialogRef<LoginComponent>, public router: Router) {
     this.hide = true;
     const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     this.emailFormControl = new FormControl('', [Validators.required, Validators.pattern(EMAIL_REGEX)]);
   }
 
-  getErrorMessage() {
+  public getErrorMessage() {
     return this.emailFormControl.hasError('required') ? 'You must enter a value' :
-      this.emailFormControl.hasError('email') ? 'Not a valid email' :
-        '';
+      this.emailFormControl.hasError('pattern') ? 'Not a valid email' :
+        '1';
   }
 
-  onNoClick(): void {
+  public authenticate() {
+    if (this.getErrorMessage() === '1') {
+      this.loginBtn();
+    }
+  }
+
+  public loginBtn() {
     this.dialogRef.close();
+    this.router.navigate(['profile']);
   }
 
 }

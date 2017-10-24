@@ -31,6 +31,7 @@ console.log("Configuring...");
 // remove previous symlinks if they exist
 try {
   if (fs.existsSync(resolve(nativescriptAppPath))) {
+    console.log("Delete");
     fs.unlinkSync(resolve(nativescriptAppPath));
   }
 } catch (err) {

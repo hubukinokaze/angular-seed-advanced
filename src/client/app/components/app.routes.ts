@@ -4,11 +4,13 @@ import { AboutRoutes } from './about/about.routes';
 import { NovelRoutes } from './novel/novel.routes';
 // import { ArtRoutes } from './art/art.routes';
 // import { MangaRoutes } from './manga/manga.routes';
+import { ProfileRoutes } from './profile/profile.routes';
 
 export const routes: Array<any> = [
   ...HomeRoutes,
   ...AboutRoutes,
-  ...NovelRoutes
+  ...NovelRoutes,
   // ...ArtRoutes,
   // ...MangaRoutes
+  ...ProfileRoutes
 ];

@@ -4,14 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { NovelComponent } from './novel/novel.component';
 // import { ArtComponent } from './art/art.component';
 // import { MangaComponent } from './manga/manga.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const APP_COMPONENTS: any[] = [
   AppComponent,
   AboutComponent,
   HomeComponent,
-  NovelComponent
+  NovelComponent,
   // ArtComponent,
   // MangaComponent,
+  ProfileComponent
 ];
 
 export * from './app.component';
@@ -20,3 +22,4 @@ export * from './home/home.component';
 export * from './novel/novel.component';
 // export * from './art/art.component';
 // export * from './manga/manga.component';
+export * from './profile/profile.component';

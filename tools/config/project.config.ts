@@ -12,7 +12,7 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
   constructor() {
     super();
-    // this.APP_TITLE = 'HikiNEETO's Life';
+    // this.APP_TITLE = 'HikiNEETO\'s Life';
     // this.GOOGLE_ANALYTICS_ID = 'Your site's ID';
 
     /* Enable typeless compiler runs (faster) between typed compiler runs. */

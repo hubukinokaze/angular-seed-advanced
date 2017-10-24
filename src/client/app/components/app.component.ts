@@ -2,7 +2,7 @@
 import './operators';
 
 // libs
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 // app
 import { AnalyticsService } from '../modules/analytics/services/index';

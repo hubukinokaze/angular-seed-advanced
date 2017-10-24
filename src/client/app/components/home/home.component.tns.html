@@ -1,3 +1,52 @@
-<StackLayout>
-
-</StackLayout>
+<ActionBar title="HikiNEETO's Life" class="action-bar">
+  <ActionItem nsRouterLink="/" ios.position="right" android.position="popup" [text]="'HOME'">
+  </ActionItem>
+  <ActionItem nsRouterLink="/novel" ios.position="right" android.position="popup" [text]="'NOVEL'">
+  </ActionItem>
+  <ActionItem nsRouterLink="/art" ios.position="right" android.position="popup" [text]="'ART'">
+  </ActionItem>
+  <ActionItem nsRouterLink="/manga" ios.position="right" android.position="popup" [text]="'MANGA'">
+  </ActionItem>
+  <ActionItem nsRouterLink="/about" ios.position="right" android.position="popup" [text]="'ABOUT'">
+  </ActionItem>
+  <ActionItem ios.position="right" android.position="popup" [text]="'LOG IN'">
+  </ActionItem>
+</ActionBar>
+<GridLayout>
+  <TabView [(ngModel)]="tabSelectedIndex">
+    <StackLayout *tabItem="{title: 'Novel'}">
+      <ListView [items]="novelList" class="list-group" style="height:100%">
+        <ng-template let-novel="item" let-odd="odd" let-even="even">
+          <GridLayout columns="auto *" rows="auto auto" class="list-group-item" [class.odd]="odd" [class.even]="even">
+            <Image [src]="'./assets/img/no_image_2.png'" stretch="aspectFill" row="0" col="0" rowSpan="2" width="80" height="80" class="thumb img-circle"></Image>
+            <Label row="0" col="1" [text]="novel.title"></Label>
+            <Label row="1" col="1" [text]="novel.author"></Label>
+            <Label row="2" col="1" [text]="novel.description"></Label>
+          </GridLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Art'}">
+      <ListView [items]="artList" class="list-group" style="height:100%">
+        <ng-template let-art="item" let-odd="odd" let-even="even">
+          <StackLayout class="list-group-item" [class.odd]="odd" [class.even]="even">
+            <Label [text]="art.title"></Label>
+            <Label [text]="art.author"></Label>
+            <Label [text]="art.description"></Label>
+          </StackLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Manga'}">
+      <ListView [items]="mangaList" class="list-group" style="height:100%">
+        <ng-template let-manga="item" let-odd="odd" let-even="even">
+          <StackLayout class="list-group-item" [class.odd]="odd" [class.even]="even">
+            <Label [text]="manga.title"></Label>
+            <Label [text]="manga.author"></Label>
+            <Label [text]="manga.description"></Label>
+          </StackLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+  </TabView>
+</GridLayout>
