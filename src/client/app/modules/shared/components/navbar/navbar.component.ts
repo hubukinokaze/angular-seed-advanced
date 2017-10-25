@@ -6,6 +6,9 @@ import { MdDialog, MdDialogRef } from '@angular/material';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+//lib
+import { DataService } from '../../services/data/data.services';
+
 @Component({
   moduleId: module.id,
   selector: 'sd-navbar',
@@ -66,7 +69,7 @@ export class LoginComponent {
   public emailFormControl: any;
 
   constructor(
-    public dialogRef: MdDialogRef<LoginComponent>, public router: Router) {
+    public dialogRef: MdDialogRef<LoginComponent>, public router: Router, private data: DataService) {
     this.hide = true;
     const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     this.emailFormControl = new FormControl('', [Validators.required, Validators.pattern(EMAIL_REGEX)]);
@@ -85,8 +88,14 @@ export class LoginComponent {
   }
 
   public loginBtn() {
+    if (this.email === 'admin@gmail.com') {
+      this.data.changeStatus('admin');
+    } else {
+      this.data.changeStatus('member');
+    }
     this.dialogRef.close();
     this.router.navigate(['profile', this.email]);
+
   }
 
 }

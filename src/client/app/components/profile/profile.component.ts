@@ -1,5 +1,9 @@
+//lib
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+//app
+import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component ({
   moduleId: module.id,
@@ -13,10 +17,15 @@ export class ProfileComponent {
   public avatar: any;
   public status: any;
 
-  constructor(private route: ActivatedRoute) {  }
+  constructor(private route: ActivatedRoute, private data: DataService) {  }
 
   ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.status = status);
     this.route.params.subscribe((params) => this.email = params.email);
+  }
+
+  public logOut() {
+    this.data.changeStatus('guest');
   }
 
 }
