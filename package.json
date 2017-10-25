@@ -32,7 +32,7 @@
     "e2e": "protractor",
     "e2e.live": "protractor --elementExplorer",
     "gulp": "gulp",
-    "heroku-prebuild": "npm install http-server --save",
+    "heroku-prebuild": "npm install http-server gulp --save",
     "heroku-postbuild": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp build.prod",
     "lint": "gulp tslint",
     "karma": "karma",
