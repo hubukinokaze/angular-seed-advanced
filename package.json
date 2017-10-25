@@ -71,8 +71,7 @@
   },
   "author": "Jun Kawa <yudai.j.kawa@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "@angular/animations": "^4.4.4",
     "@angular/cdk": "2.0.0-beta.11",
@@ -99,9 +98,8 @@
     "rxjs": "~5.4.0",
     "systemjs": "0.19.41",
     "ts-node": "^3.3.0",
-    "typescript": "2.3.3",
+    "typescript": "2.5.3",
     "zone.js": "^0.8.18",
-
     "@compodoc/compodoc": "^1.0.0-beta.7",
     "@types/async": "^2.0.44",
     "@types/browser-sync": "^0.0.34",
