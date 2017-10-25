@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 // app
 import { RouterExtensions, Config } from '../../modules/core/index';
+import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component({
   moduleId: module.id,
@@ -14,10 +15,12 @@ import { RouterExtensions, Config } from '../../modules/core/index';
 export class NovelComponent implements OnInit {
   public names$: Observable<any>;
   public newName: string;
+  private status: any;
 
-  constructor(public routerext: RouterExtensions) {}
+  constructor(public routerext: RouterExtensions, private data: DataService) {}
 
   ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.status = status);
     this.newName = '';
   }
 

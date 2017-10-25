@@ -8,6 +8,7 @@ import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule,
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
+import { SHARED_SERVICES } from './services/index';
 
 const SHARED_MODULES: any[] = [
   CommonModule,
@@ -50,6 +51,9 @@ const SHARED_MODULES: any[] = [
   ],
   entryComponents: [
     ...SHARED_COMPONENTS,
+  ],
+  providers: [
+    ...SHARED_SERVICES,
   ]
 })
 export class SharedModule {}

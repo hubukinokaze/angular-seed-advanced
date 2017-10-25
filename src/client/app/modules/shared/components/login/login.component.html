@@ -1,6 +1,6 @@
 <div class="dialog-container">
   <md-form-field>
-    <input mdInput placeholder="Email" name="email" [formControl]="emailFormControl" required>
+    <input mdInput placeholder="Email" [(ngModel)]="email" name="email" [formControl]="emailFormControl" required>
     <md-error *ngIf="emailFormControl.hasError('pattern')">
       Please enter a <strong>valid</strong> email address
     </md-error>

@@ -62,6 +62,7 @@ export class NavbarComponent {
 })
 export class LoginComponent {
   public hide: any;
+  public email: any;
   public emailFormControl: any;
 
   constructor(
@@ -85,7 +86,7 @@ export class LoginComponent {
 
   public loginBtn() {
     this.dialogRef.close();
-    this.router.navigate(['profile']);
+    this.router.navigate(['profile', this.email]);
   }
 
 }

@@ -1,9 +1,9 @@
 // libs
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 
 // app
-import { RouterExtensions, Config } from '../../modules/core/index';
+import { RouterExtensions } from '../../modules/core/index';
+import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component({
   moduleId: module.id,
@@ -17,12 +17,14 @@ export class HomeComponent implements OnInit {
   public mangaList: any;
   public newsList: any;
   public tabSelectedIndex: number;
+  private status: any;
 
-  constructor(public routerext: RouterExtensions) {
+  constructor(public routerext: RouterExtensions, private data: DataService) {
     this.tabSelectedIndex = 0;
   }
 
   ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.status = status);
     this.novelList = [
       {
         icon: 'collections',
@@ -188,5 +190,5 @@ export class HomeComponent implements OnInit {
       }
     ];
   }
-  
+
 }

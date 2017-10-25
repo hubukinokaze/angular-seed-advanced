@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component ({
   moduleId: module.id,
@@ -8,10 +9,14 @@ import {Component} from '@angular/core';
 })
 
 export class ProfileComponent {
-  public username: any;
+  public email: any;
   public avatar: any;
   public status: any;
 
-  constructor() {  }
+  constructor(private route: ActivatedRoute) {  }
+
+  ngOnInit() {
+    this.route.params.subscribe((params) => this.email = params.email);
+  }
 
 }

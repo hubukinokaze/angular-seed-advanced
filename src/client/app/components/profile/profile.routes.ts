@@ -4,5 +4,9 @@ export const ProfileRoutes: Array<any> = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'profile/:email',
+    component: ProfileComponent
   }
 ];
