@@ -161,10 +161,8 @@
     "systemjs-builder": "0.15.34",
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
-    "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typedoc": "^0.6.0",
-    "typescript": "2.3.3",
     "walk": "^2.3.9",
     "yargs": "^8.0.2"
   },
@@ -193,6 +191,8 @@
     "reflect-metadata": "^0.1.10",
     "rxjs": "~5.4.0",
     "systemjs": "0.19.41",
+    "ts-node": "^3.3.0",
+    "typescript": "2.3.3",
     "zone.js": "^0.8.18"
   }
 }
