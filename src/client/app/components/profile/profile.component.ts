@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 //app
+import { RouterExtensions, Config } from '../../modules/core/index';
 import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component ({
@@ -17,7 +18,7 @@ export class ProfileComponent {
   public avatar: any;
   public status: any;
 
-  constructor(private route: ActivatedRoute, private data: DataService) {  }
+  constructor(public routerext: RouterExtensions, private route: ActivatedRoute, private data: DataService) {  }
 
   ngOnInit() {
     this.data.currentStatus.subscribe(status => this.status = status);
