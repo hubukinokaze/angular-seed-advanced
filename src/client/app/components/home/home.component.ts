@@ -1,8 +1,7 @@
 // libs
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // app
-import { RouterExtensions } from '../../modules/core/index';
 import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component({
@@ -19,7 +18,7 @@ export class HomeComponent implements OnInit {
   public tabSelectedIndex: number;
   private status: any;
 
-  constructor(public routerext: RouterExtensions, private data: DataService) {
+  constructor(private data: DataService) {
     this.tabSelectedIndex = 0;
   }
 

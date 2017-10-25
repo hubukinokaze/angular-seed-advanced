@@ -1,6 +1,5 @@
 // app
 import { Component } from '@angular/core';
-import { SharedModule } from '../../shared.module';
 import { trigger,style,transition,animate,state } from '@angular/animations';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { FormControl, Validators } from '@angular/forms';

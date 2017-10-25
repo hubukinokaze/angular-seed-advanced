@@ -1,6 +1,5 @@
 //lib
-import { Injector, Component } from '@angular/core';
-import { Config } from '../../modules/core/index';
+import { Component } from '@angular/core';
 
 //app
 import { DataService } from '../../modules/shared/services/data/data.services';
@@ -16,7 +15,7 @@ import { DataService } from '../../modules/shared/services/data/data.services';
 export class AboutComponent {
   private status: any;
 
-  constructor(private injector: Injector, private data: DataService) {
+  constructor(private data: DataService) {
     // This is here as an example
     // if (this.page) {
     //   this.page.actionBarHidden = true;

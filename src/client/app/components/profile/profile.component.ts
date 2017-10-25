@@ -3,12 +3,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 //app
-import { RouterExtensions, Config } from '../../modules/core/index';
 import { DataService } from '../../modules/shared/services/data/data.services';
 
 @Component ({
   moduleId: module.id,
-  selector: 'sd-home',
+  selector: 'sd-profile',
   templateUrl: 'profile.component.html',
   styleUrls: ['profile.component.css']
 })
@@ -18,7 +17,10 @@ export class ProfileComponent {
   public avatar: any;
   public status: any;
 
-  constructor(public routerext: RouterExtensions, private route: ActivatedRoute, private data: DataService) {  }
+  constructor(private route: ActivatedRoute, private data: DataService) {
+    this.email = 'none';
+    this.status = 'guest';
+  }
 
   ngOnInit() {
     this.data.currentStatus.subscribe(status => this.status = status);
