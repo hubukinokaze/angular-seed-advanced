@@ -5,6 +5,7 @@ import { NovelRoutes } from './novel/novel.routes';
 // import { ArtRoutes } from './art/art.routes';
 // import { MangaRoutes } from './manga/manga.routes';
 import { ProfileRoutes } from './profile/profile.routes';
+import { NewArtRoutes } from './new_art/new_art.routes';
 
 export const routes: Array<any> = [
   ...HomeRoutes,
@@ -12,5 +13,6 @@ export const routes: Array<any> = [
   ...NovelRoutes,
   // ...ArtRoutes,
   // ...MangaRoutes
-  ...ProfileRoutes
+  ...ProfileRoutes,
+  ...NewArtRoutes
 ];

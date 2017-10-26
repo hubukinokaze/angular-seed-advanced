@@ -18,8 +18,7 @@ export class ProfileComponent {
   public status: any;
 
   constructor(private route: ActivatedRoute, private data: DataService) {
-    this.email = 'none';
-    this.status = 'guest';
+    this.email = 'nothing';
   }
 
   ngOnInit() {

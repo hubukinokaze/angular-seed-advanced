@@ -1,18 +1,22 @@
-<body>
-<div>
-  <span>
-    Profile
-  </span>
-  <span>
-    email: {{ email }}
-  </span>
-  <span>
-    status: {{ status }}
-  </span>
-  <span>
-    <button (click)="logOut()"
-            [routerLink]="'../../'" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
-      Log Out</button>
-  </span>
+<body class="profile-body">
+<h1>Profile</h1>
+<div class="list-container">
+  <md-list>
+    <md-list-item>
+      <md-icon md-list-avatar class="media-img"><img src="./assets/img/no_image_2.png"/></md-icon>
+      <p md-line>email: {{ email }}</p>
+      <p md-line>status: {{ status }}</p>
+    </md-list-item>
+  </md-list>
 </div>
+<div *ngIf="status === 'admin'">
+  <button [routerLink]="'/new-art'" [replaceUrl]="true" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    Add New Art
+  </button>
+</div>
+<!--<span>-->
+    <!--<button (click)="logOut()"-->
+            <!--[routerLink]="" [replaceUrl]="true" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">-->
+      <!--Log Out</button>-->
+  <!--</span>-->
 </body>

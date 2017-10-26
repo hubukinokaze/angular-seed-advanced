@@ -6,6 +6,10 @@
   padding: 0 16px;
 }
 
+.spacer {
+  width: 100%;
+}
+
 h1 {
   z-index: 1;
   font-family: Cinzel, sans-serif;
@@ -68,7 +72,7 @@ a:hover {
 }
 
 @media all and (max-width: 500px) {
-  body.profile-body {
+  body.new-art-body {
     width: 100% !important;
   }
 
@@ -86,7 +90,7 @@ a:hover {
 
 }
 
-body.profile-body {
+body.new-art-body {
   background-color: $lap-pool-blue;
   margin: auto;
   width: 70%;
@@ -94,18 +98,20 @@ body.profile-body {
   height: 100%;
 }
 
-div.list-container {
+form {
   min-width: 350px;
   min-height: 450px;
   padding: 30px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
-md-icon[md-list-avatar].media-img, md-icon[md-list-avatar].media-img > img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-size: contain;
+md-form-field, md-select{
+  width: 70%;
+}
+
+textarea {
+  background-color: whitesmoke;
+  height: 300px
 }

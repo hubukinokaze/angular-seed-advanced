@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule, MdDialogModule, MdFormFieldModule, MdInputModule } from '@angular/material';
+import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule, MdDialogModule, MdFormFieldModule, MdInputModule, MdSelectModule, MdOptionModule } from '@angular/material';
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
@@ -24,7 +24,9 @@ const SHARED_MODULES: any[] = [
   MdTabsModule,
   MdDialogModule,
   MdFormFieldModule,
-  MdInputModule
+  MdInputModule,
+  MdSelectModule,
+  MdOptionModule
 ];
 
 /**

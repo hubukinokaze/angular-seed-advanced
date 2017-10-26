@@ -4,9 +4,13 @@
        [routerLink]="link.link" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{ link.name }}</a>
   </span>
   <span class="spacer"></span>
-  <span>
+  <span class="login-container" *ngIf="this.status == 'guest'">
     <a (mouseenter)="switcher(5)" (mouseleave)="switcher(5)" [@highlight]="navSelect[5]"
        (click)="openDialog()">Log In</a>
+  </span>
+  <span class="logout-container" *ngIf="this.status != 'guest'">
+    <a (mouseenter)="switcher(5)" (mouseleave)="switcher(5)" [@highlight]="navSelect[5]"
+       (click)="logout()">Log Out</a>
   </span>
 </nav>
 

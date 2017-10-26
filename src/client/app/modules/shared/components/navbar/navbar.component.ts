@@ -28,8 +28,9 @@ import { DataService } from '../../services/data/data.services';
 export class NavbarComponent {
   public links: any[];
   public navSelect: any[];
+  public status: any;
 
-  constructor(public dialog: MdDialog) {
+  constructor(public dialog: MdDialog, private data: DataService, public router: Router) {
     this.links = [
       {link: '', name: 'HOME'},
       {link: 'novel', name: 'NOVEL'},
@@ -40,7 +41,12 @@ export class NavbarComponent {
     this.navSelect = [1, 1, 1, 1, 1, 1];
   }
 
-  public switcher(i) {
+  ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.status = status);
+    console.log(this.status);
+  }
+
+  public switcher(i): void {
     this.navSelect[i] = (this.navSelect[i] === 1 ? -1 : 1);
   }
 
@@ -48,9 +54,13 @@ export class NavbarComponent {
     let dialogRef = this.dialog.open(LoginComponent, {
       width: '60%'
     });
-
     // dialogRef.afterClosed().subscribe(result => {
     // });
+  }
+
+  public logout(): void {
+    this.data.changeStatus('guest');
+    this.router.navigateByUrl('');
   }
 }
 
@@ -62,39 +72,43 @@ export class NavbarComponent {
     '../login/login.component.css',
   ]
 })
+
 export class LoginComponent {
   public hide: any;
   public email: any;
   public emailFormControl: any;
+  public status: any;
 
-  constructor(
-    public dialogRef: MdDialogRef<LoginComponent>, public router: Router, private data: DataService) {
+  constructor(public dialogRef: MdDialogRef<LoginComponent>, public router: Router, private data: DataService) {
     this.hide = true;
     const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     this.emailFormControl = new FormControl('', [Validators.required, Validators.pattern(EMAIL_REGEX)]);
   }
 
-  public getErrorMessage() {
+  ngOnInit() {
+    this.data.currentStatus.subscribe(status => this.status = status);
+  }
+
+  public getErrorMessage(): string {
     return this.emailFormControl.hasError('required') ? 'You must enter a value' :
       this.emailFormControl.hasError('pattern') ? 'Not a valid email' :
         '1';
   }
 
-  public authenticate() {
+  public authenticate(): void {
     if (this.getErrorMessage() === '1') {
       this.loginBtn();
     }
   }
 
-  public loginBtn() {
+  public loginBtn(): void {
     if (this.email === 'admin@gmail.com') {
       this.data.changeStatus('admin');
     } else {
       this.data.changeStatus('member');
     }
+
     this.dialogRef.close();
-    this.router.navigate(['profile', this.email]);
-
+    this.router.navigateByUrl(`profile/${this.email}`);
   }
-
 }

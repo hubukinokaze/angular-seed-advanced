@@ -1,0 +1,24 @@
+<body class="new-art-body">
+<h1>New Art Submission</h1>
+<form>
+  <md-select placeholder="Select" required>
+    <md-option *ngFor="let i of artType" value="i">{{ i }}</md-option>
+  </md-select>
+
+  <md-form-field>
+    <input mdInput #title placeholder="Title" maxlength="20" required>
+  </md-form-field>
+
+  <md-form-field>
+    <textarea mdInput #story placeholder="Your story goes here" minlength="100" required></textarea>
+    <md-hint align="end">{{ story.value.length }}</md-hint>
+  </md-form-field>
+  <span class="spacer"></span>
+  <span>
+<button (click)="submit()"
+        [routerLink]="link" [replaceUrl]="true" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+Submit</button>
+</span>
+</form>
+<p>{{ title.value }}</p>
+</body>
