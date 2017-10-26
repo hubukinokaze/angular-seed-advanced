@@ -43,7 +43,6 @@ export class NavbarComponent {
 
   ngOnInit() {
     this.data.currentStatus.subscribe(status => this.status = status);
-    console.log(this.status);
   }
 
   public switcher(i): void {

@@ -7,7 +7,10 @@ import { NovelRoutes } from './novel/novel.routes';
 import { ProfileRoutes } from './profile/profile.routes';
 import { NewArtRoutes } from './new_art/new_art.routes';
 
-export const routes: Array<any> = [
+import { NgModule} from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+export const routes:Routes = [
   ...HomeRoutes,
   ...AboutRoutes,
   ...NovelRoutes,
@@ -16,3 +19,11 @@ export const routes: Array<any> = [
   ...ProfileRoutes,
   ...NewArtRoutes
 ];
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
