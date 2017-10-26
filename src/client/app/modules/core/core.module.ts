@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { routes } from '../../components/app.routes';
 
 // module
 import { SharedModule } from '../shared/index';
@@ -22,7 +23,8 @@ interface ICoreModuleOptions {
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
+    routes
   ],
   declarations: [
     ...CORE_DIRECTIVES
@@ -31,7 +33,7 @@ interface ICoreModuleOptions {
     ...CORE_DIRECTIVES
   ],
   providers: [
-    ...CORE_PROVIDERS,
+    ...CORE_PROVIDERS
   ]
 })
 export class CoreModule {
