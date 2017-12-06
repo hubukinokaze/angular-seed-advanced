@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { routes } from '../../components/app.routes';
 
 // module
 import { SharedModule } from '../shared/index';
@@ -23,12 +24,14 @@ interface ICoreModuleOptions {
 @NgModule({
   imports: [
     SharedModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   declarations: [
     ...CORE_DIRECTIVES,
   ],
   exports: [
     ...CORE_DIRECTIVES,
+    RouterModule
   ],
   providers: [
     ...CORE_PROVIDERS,

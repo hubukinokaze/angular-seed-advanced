@@ -1,20 +1,35 @@
+@import '../../../scss/variables';
+
 :host {
+  font-family: Gentium Basic, sans-serif;
   display: block;
   padding: 0 16px;
 }
 
-.feature-list .body {
-  font-size: 16px;
-  color: #555;
-  margin: 0 0 5px 0;
+div.terms-body {
+  padding: 0 4em;
 }
 
-.h1 {
-  color: #106cc8;
-  font-size: 24px;
+p[md-list-icon] {
+  color: $deckled-edge;
 }
 
-.h4 {
-  color: #999;
-  font-size: 18px;
+md-list-item.amendment-list {
+  padding: 2em 0;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px){
+  md-list-item.amendment-list {
+    padding: 3em 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.terms-body {
+    padding: 0;
+  }
+
+  md-list-item.amendment-list {
+    padding: 3.5em 0;
+  }
 }

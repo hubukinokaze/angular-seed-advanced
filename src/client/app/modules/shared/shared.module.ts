@@ -4,8 +4,18 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdListModule, MdIconModule, MdMenuModule, MdButtonModule, MdTabsModule, MdDialogModule, MdFormFieldModule, MdInputModule, MdSelectModule, MdOptionModule } from '@angular/material';
-import { AppRoutingModule  } from '../../components/app.routes';
+import {
+  MdListModule,
+  MdIconModule,
+  MdMenuModule,
+  MdButtonModule,
+  MdTabsModule,
+  MdDialogModule,
+  MdFormFieldModule,
+  MdInputModule,
+  MdSelectModule,
+  MdOptionModule
+} from '@angular/material';
 
 // modules
 import { SHARED_COMPONENTS } from './components/index';
@@ -27,8 +37,7 @@ const SHARED_MODULES: any[] = [
   MdFormFieldModule,
   MdInputModule,
   MdSelectModule,
-  MdOptionModule,
-  AppRoutingModule
+  MdOptionModule
 ];
 
 /**

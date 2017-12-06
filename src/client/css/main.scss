@@ -18,6 +18,27 @@ body {
   flex-direction: column;
 }
 
+body.default-body {
+  background-color: $lap-pool-blue;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  height: 100%;
+}
+
+h1.title {
+  z-index: 1;
+  font-family: Cinzel, sans-serif;
+  margin: auto;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $deckled-edge;
+  border-width: 0px 0px 10px 0px;
+  border-style: double;
+  border-color: $primary;
+}
+
 /* Box-sizing border-box */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -72,10 +93,50 @@ button:hover {
   background-color: $secondary;
 }
 
+p[md-line].description {
+  padding: 3em;
+}
 
-@media all and (max-width: 500px) {
+.mat-list .mat-list-item .mat-line, .mat-nav-list .mat-list-item .mat-line, .mat-selection-list .mat-list-item .mat-line {
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  //word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  white-space: normal;
+  text-align: justify;
+  padding: 5em;
+}
+
+@media screen and (max-width: 600px) {
   sd-navbar {
     display: none !important;
+  }
+
+  body.default-body {
+    width: 100% !important;
+  }
+
+  div.list-container {
+    min-width: 280px !important;
+  }
+
+  h1.title {
+    font-size: 28px;
+  }
+
+  h3 > a {
+    font-size: 23px;
+  }
+
+  md-icon[md-list-avatar].media-img, md-icon[md-list-avatar].media-img > img {
+    height: 90% !important;
+    width: 90% !important;
+    position: absolute;
+    left: 5%;
+    top: 5px;
+    opacity: 0.4;
   }
 }
 

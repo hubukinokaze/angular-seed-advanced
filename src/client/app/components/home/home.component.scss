@@ -6,7 +6,7 @@
   padding: 0 16px;
 }
 
-h1 {
+h1.title {
   z-index: 1;
   font-family: Cinzel, sans-serif;
   margin: auto;
@@ -67,45 +67,6 @@ a:hover {
   min-width: 80px;
 }
 
-@media all and (max-width: 500px) {
-  body.home-body {
-    width: 100% !important;
-  }
-
-  div.list-container {
-    min-width: 280px !important;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h3 > a {
-    font-size: 23px;
-  }
-
-  p[md-line].description {
-    display: none;
-  }
-
-  md-icon[md-list-avatar].media-img, md-icon[md-list-avatar].media-img > img {
-    height: 90% !important;
-    width: 90% !important;
-    position: absolute;
-    left: 5%;
-    top: 5px;
-    opacity: 0.4;
-  }
-}
-
-body.home-body {
-  background-color: $lap-pool-blue;
-  margin: auto;
-  width: 70%;
-  padding: 10px;
-  height: 100%;
-}
-
 div.list-group {
   display: flex;
   flex-flow: column;
@@ -122,24 +83,15 @@ md-icon {
   color: $alert;
 }
 
-p[md-line].description {
-  padding: 5px 0 10px 0;
-  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  white-space: pre-wrap;       /* css-3 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
-  white-space: normal;
-  text-align: justify;
-  line-height: 1.5em;
-  height: 5em;       /* height is 2x line-height, so two lines will display */
-  overflow: hidden;
-}
-
 md-icon[md-list-avatar].media-img, md-icon[md-list-avatar].media-img > img {
   height: 160px;
   width: 140px;
   border-radius: 5%;
   background-size: contain;
+}
+
+@media screen and (max-width: 600px) {
+  p[md-line].home-description {
+    display: none !important;
+  }
 }

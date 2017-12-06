@@ -10,7 +10,7 @@ import { NewArtRoutes } from './new_art/new_art.routes';
 import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-export const routes:Routes = [
+export const routes: Routes = [
   ...HomeRoutes,
   ...AboutRoutes,
   ...NovelRoutes,
@@ -19,11 +19,3 @@ export const routes:Routes = [
   ...ProfileRoutes,
   ...NewArtRoutes
 ];
-
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-
-export class AppRoutingModule { }
