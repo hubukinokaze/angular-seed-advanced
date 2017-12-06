@@ -14,17 +14,29 @@ p[md-list-icon] {
   color: $deckled-edge;
 }
 
+h2[md-line].amendment-title {
+  color: $alert;
+  font-weight: 800;
+  padding: 0.5em;
+}
+
 md-list-item.amendment-list {
   padding: 2em 0;
 }
 
-@media only screen and (max-width: 900px) and (min-width: 600px){
+@media screen and (min-width: 900px){
+  .mat-list-item .mat-line:nth-child(n+2) {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px){
   md-list-item.amendment-list {
     padding: 3em 0;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   div.terms-body {
     padding: 0;
   }
