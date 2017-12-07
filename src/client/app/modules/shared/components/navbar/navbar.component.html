@@ -1,7 +1,7 @@
 <nav class="nav-container">
   <span *ngFor="let link of links; let i = index">
     <a (mouseenter)="switcher(i)" (mouseleave)="switcher(i)" [@highlight]="navSelect[i]"
-       [routerLink]="link.link" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{ link.name }}</a>
+       routerLink="{{ link.link }}">{{ link.name }}</a>
   </span>
   <span class="spacer"></span>
   <span class="login-container" *ngIf="this.status == 'guest'">

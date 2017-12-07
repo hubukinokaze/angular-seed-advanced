@@ -1,6 +1,6 @@
 <div class="toolbar-container">
   <span>
-    <h1><a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HikiNEETO's Life</a></h1>
+    <h1><a routerLink='/'>HikiNEETO's Life</a></h1>
     <p class="slogan">—just-stay-home—</p>
   </span>
   <span class="spacer"></span>
@@ -10,23 +10,23 @@
     </button>
   </span>
   <md-menu x-position="before" y-position="above" #menu="mdMenu">
-    <button md-menu-item [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    <button md-menu-item routerLink='/'>
       <md-icon>home</md-icon>
       <span>Home</span>
     </button>
-    <button md-menu-item [routerLink]="['/novel']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    <button md-menu-item routerLink='/novel'>
       <md-icon>books</md-icon>
       <span>Novel</span>
     </button>
-    <button md-menu-item [routerLink]="['/art']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    <button md-menu-item routerLink='/art'>
       <md-icon>color_lens</md-icon>
       <span>Art</span>
     </button>
-    <button md-menu-item [routerLink]="['/manga']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    <button md-menu-item routerLink='/manga'>
       <md-icon>dashboard</md-icon >
       <span>Manga</span>
     </button>
-    <button md-menu-item [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    <button md-menu-item routerLink='/about'>
       <md-icon>info</md-icon>
       <span>About</span>
     </button>
