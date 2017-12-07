@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { Http } from '@angular/http';
 
 // app
-import { APP_COMPONENTS, AppComponent } from './app/components/index';
+import { APP_COMPONENTS, AppComponent } from './app/components/app.module';
 import { routes } from './app/components/app.routes';
 
 // feature modules
