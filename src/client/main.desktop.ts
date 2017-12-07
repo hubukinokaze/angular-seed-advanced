@@ -60,12 +60,13 @@ app.on('ready', () => {
 
   let helpMenu: any = {
     label: 'Help',
-    submenu: [{
-      label: 'Learn More',
-      click:() => {
-        shell.openExternal('https://github.com/hubukinokaze/hikineetos-life');
-      }
-    }, {
+    submenu:
+      [{
+        label: 'Learn More',
+        click:() => {
+          shell.openExternal('https://github.com/hubukinokaze/hikineetos-life');
+        }
+      }, {
         label: 'Issues',
         click:() => {
           shell.openExternal('https://github.com/hubukinokaze/hikineetos-life/issues');
@@ -169,11 +170,12 @@ app.on('ready', () => {
           }]
       }, {
         label: 'Window',
-        submenu: [{
-          label: 'Minimize',
-          accelerator: 'Command+M',
-          selector: 'performMiniaturize:'
-        }, {
+        submenu:
+          [{
+            label: 'Minimize',
+            accelerator: 'Command+M',
+            selector: 'performMiniaturize:'
+          }, {
             label: 'Close',
             accelerator: 'Command+W',
             selector: 'performClose:'
@@ -183,7 +185,7 @@ app.on('ready', () => {
             label: 'Bring All to Front',
             selector: 'arrangeInFront:'
           }]
-      },
+    },
       helpMenu];
 
     menu = Menu.buildFromTemplate(template);
@@ -191,10 +193,11 @@ app.on('ready', () => {
   } else {
     template = [{
       label: '&File',
-      submenu: [{
-        label: '&Open',
-        accelerator: 'Ctrl+O'
-      }, {
+      submenu:
+        [{
+          label: '&Open',
+          accelerator: 'Ctrl+O'
+        }, {
           label: '&Close',
           accelerator: 'Ctrl+W',
           click:() => {
@@ -202,33 +205,28 @@ app.on('ready', () => {
           }
         }]
     }, {
-        label: '&View',
-        submenu: (process.env.NODE_ENV === 'development') ? [{
-          label: '&Reload',
-          accelerator: 'Ctrl+R',
-          click:() => {
-            mainWindow.reload();
-          }
-        }, {
-            label: 'Toggle &Full Screen',
-            accelerator: 'F11',
-            click:() => {
-              mainWindow.setFullScreen(!mainWindow.isFullScreen());
-            }
-          }, {
-            label: 'Toggle &Developer Tools',
-            accelerator: 'Alt+Ctrl+I',
-            click:() => {
-              mainWindow.toggleDevTools();
-            }
-          }] : [{
-            label: 'Toggle &Full Screen',
-            accelerator: 'F11',
-            click:() => {
-              mainWindow.setFullScreen(!mainWindow.isFullScreen());
-            }
-          }]
-      },
+      label: '&View',
+      submenu:
+        [{
+        label: '&Reload',
+        accelerator: 'F5',
+        click:() => {
+          mainWindow.reload();
+        }
+      }, {
+        label: 'Toggle &Full Screen',
+        accelerator: 'F11',
+        click:() => {
+          mainWindow.setFullScreen(!mainWindow.isFullScreen());
+        }
+      }, {
+        label: 'Toggle &Developer Tools',
+        accelerator: 'Alt+Ctrl+I',
+        click:() => {
+          mainWindow.toggleDevTools();
+        }
+      }]
+    },
       helpMenu];
     menu = Menu.buildFromTemplate(template);
     mainWindow.setMenu(menu);

@@ -24,7 +24,7 @@ interface ICoreModuleOptions {
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes)
   ],
   declarations: [
     ...CORE_DIRECTIVES,
