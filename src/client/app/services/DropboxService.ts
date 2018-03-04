@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Http, Headers, RequestOptions} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {CookieService} from 'ngx-cookie';
+import { CookieService } from 'ngx-cookie';
 
 @Injectable()
 export class DropboxService {
@@ -11,6 +11,7 @@ export class DropboxService {
   public constructor(private http: Http, private cookie: CookieService) {
     this.dropboxApi = 'https://api.dropboxapi.com/2/files';
     this.bearer = `Bearer  ${this.cookie.get('token')}`;
+    console.log(this.bearer);
   }
 
   public getArtworkFromDropbox(artwork) {

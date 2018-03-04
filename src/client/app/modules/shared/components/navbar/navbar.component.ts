@@ -43,8 +43,11 @@ export class NavbarComponent {
     this.navSelect = [1, 1, 1, 1, 1, 1];
   }
 
-  // ngOnInit() {
-  // }
+  ngOnInit() {
+    if (this.cookie.get('status') !== null) {
+      this.data.setStatus(this.cookie.get('status'));
+    }
+  }
 
   public switcher(i): void {
     this.navSelect[i] = (this.navSelect[i] === 1 ? -1 : 1);
