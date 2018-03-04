@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 //app
 import { AuthService } from '../../services/AuthService';
 import { DropboxService } from '../../services/DropboxService';
-import { CookieService } from "ngx-cookie";
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   moduleId: module.id,

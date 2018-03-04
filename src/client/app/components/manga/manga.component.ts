@@ -18,6 +18,6 @@ export class MangaComponent {
   constructor(private data: DataService) {
   }
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 }

@@ -43,8 +43,8 @@ export class NavbarComponent {
     this.navSelect = [1, 1, 1, 1, 1, 1];
   }
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
   public switcher(i): void {
     this.navSelect[i] = (this.navSelect[i] === 1 ? -1 : 1);
