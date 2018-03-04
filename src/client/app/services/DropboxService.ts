@@ -10,7 +10,7 @@ export class DropboxService {
 
   public constructor(private http: Http, private cookie: CookieService) {
     this.dropboxApi = 'https://api.dropboxapi.com/2/files';
-    this.bearer = `Bearer ${this.cookie.get('token')}`;
+    this.bearer = `Bearer ${this.cookie.get('token').replace(/^"(.+(?="$))"$/, '$1')}`;
   }
 
   public getArtworkFromDropbox(artwork) {

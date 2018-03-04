@@ -44,8 +44,8 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    if (this.cookie.get('status') !== null) {
-      this.data.setStatus(this.cookie.get('status'));
+    if (this.cookie.get('status') !== null || this.cookie.get('status') !== '') {
+      this.data.setStatus(this.cookie.get('status').replace(/^"(.+(?="$))"$/, '$1'));
     }
   }
 
