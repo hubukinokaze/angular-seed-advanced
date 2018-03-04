@@ -30,15 +30,16 @@ export class ArtComponent {
 
   private getArtworkFromDropbox(link) {
     this.dropbox.getAllArtFromDropbox(link).subscribe(data => {
-      for (let i = 0; i < data.entries.length; i++) {
-        let file = data.entries[i];
-        if (file['.tag'] !== 'folder') {
-          console.log(file);
-          this.getSingleArtFromDropbox(file.path_display);
-        } else {
-          this.getArtworkFromDropbox(file.path_display);
-        }
-      }
+      console.log(data);
+      // for (let i = 0; i < data.entries.length; i++) {
+      //   let file = data.entries[i];
+      //   if (file['.tag'] !== 'folder') {
+      //     console.log(file);
+      //     this.getSingleArtFromDropbox(file.path_display);
+      //   } else {
+      //     this.getArtworkFromDropbox(file.path_display);
+      //   }
+      // }
     });
   }
 

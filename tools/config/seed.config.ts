@@ -521,6 +521,7 @@ export class SeedConfig {
       '@angular/cdk/typings': 'node_modules/@angular/cdk/bundles/cdk-typings.umd.js',
       'dist/tmp/node_modules/*': 'dist/tmp/node_modules/*',
       'node_modules/*': 'node_modules/*',
+      'ngx-cookie': 'node_modules/ngx-cookie/bundles/ngx-cookie.umd.js',
       '*': 'node_modules/*'
     },
     packages: {
