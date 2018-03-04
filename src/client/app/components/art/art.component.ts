@@ -23,7 +23,7 @@ export class ArtComponent {
   }
 
   ngDoCheck() {
-    if (!this.cookie.get('token') && this.router.url.indexOf('art') !== -1)
+    if (this.cookie.get('token') !== null && this.router.url.indexOf('art') !== -1)
       this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
   }
 
