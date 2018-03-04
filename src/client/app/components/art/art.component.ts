@@ -22,9 +22,9 @@ export class ArtComponent {
     this.artList = [];
   }
 
-  ngDoCheck() {
-    if (this.cookie.get('token') !== null && this.router.url.indexOf('art') !== -1)
-      this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
+  public getArt() {
+    // if (this.cookie.get('token') !== null)
+    this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
   }
 
 
