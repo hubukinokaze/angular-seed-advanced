@@ -32,6 +32,20 @@ md-list-item.amendment-list {
   cursor: pointer;
 }
 
+.test-template {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.test-template .temp-image {
+  height: 100px;
+}
+
+.test-template .temp-author {
+  padding-bottom: 20px;
+}
+
 @media screen and (min-width: 900px){
   .mat-list-item .mat-line:nth-child(n+2) {
     font-size: 1.1em;

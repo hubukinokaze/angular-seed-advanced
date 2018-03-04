@@ -10,7 +10,8 @@ export class DropboxService {
 
   public constructor(private http: Http, private cookie: CookieService) {
     this.dropboxApi = 'https://api.dropboxapi.com/2/files';
-    this.bearer = `Bearer  ${this.cookie.get('token')}`;
+    // this.bearer = `Bearer  ${this.cookie.get('token')}`;
+    this.bearer = `Bearer RcEsbaC2L-YAAAAAAAAAIWHEXiA2Y4oYFSPufFvXIy2sVV-2mqD-8kn2pcupInS3`;
   }
 
   public getArtworkFromDropbox(artwork) {
@@ -93,8 +94,7 @@ export class DropboxService {
       response => {
         let files = response.json().entries;
         for (let i = 0; i < files.length; i++) {
-          console.log(files[i]);
-          if (files[i].name.indexOf('.doc') !== -1 || files[i]['.tag'] === 'folder') {
+          if (files[i].name.indexOf('.doc') === -1 || files[i]['.tag'] === 'folder') {
             artList[i] = (files[i]);
           }
         }

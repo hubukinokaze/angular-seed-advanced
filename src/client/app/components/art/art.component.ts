@@ -22,28 +22,28 @@ export class ArtComponent {
     this.artList = [];
   }
 
-  ngOnChange() {
-    if (!this.cookie.get('token'))
+  ngOnInit() {
+    // if (!this.cookie.get('token'))
       this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
   }
 
 
   private getArtworkFromDropbox(link) {
-    this.dropbox.getAllArtFromDropbox(link).subscribe(data => {
-      for (let i = 0; i < data.entries.length; i++) {
-        let file = data.entries[i];
-        if (file['.tag'] !== 'folder') {
-          console.log(file);
-          this.getSingleArtFromDropbox(file.path_display);
-        } else {
-          this.getArtworkFromDropbox(file.path_display);
-        }
+    this.dropbox.getAllArtFromDropbox(link).subscribe((data) => {
+      for (var id in data) {
+        let file = data[id];
+          if (file['.tag'] !== 'folder') {
+            this.getSingleArtFromDropbox(file.path_display);
+          } else {
+            this.getArtworkFromDropbox(file.path_display);
+          }
       }
     });
   }
 
   private getSingleArtFromDropbox(link) {
-    this.dropbox.getArtworkFromDropbox(link).subscribe( data => {
+    this.dropbox.getArtworkFromDropbox(link).subscribe( (data) => {
+      console.log(data.metadata.path_display.split('/')[2]);
       this.artList.push(data);
     });
   }
