@@ -4,11 +4,11 @@
        routerLink="{{ link.link }}">{{ link.name }}</a>
   </span>
   <span class="spacer"></span>
-  <span class="login-container" *ngIf="this.status == 'guest'">
+  <span class="login-container" *ngIf="this.data.getStatus() == 'guest'">
     <a (mouseenter)="switcher(5)" (mouseleave)="switcher(5)" [@highlight]="navSelect[5]"
        (click)="openDialog()">Log In</a>
   </span>
-  <span class="logout-container" *ngIf="this.status != 'guest'">
+  <span class="logout-container" *ngIf="this.data.getStatus() == 'member' || this.data.getStatus() == 'admin'">
     <a (mouseenter)="switcher(5)" (mouseleave)="switcher(5)" [@highlight]="navSelect[5]"
        (click)="logout()">Log Out</a>
   </span>

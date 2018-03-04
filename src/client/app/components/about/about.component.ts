@@ -13,8 +13,8 @@ import { DataService } from '../../modules/shared/services/data/data.services';
   ],
 })
 export class AboutComponent {
-  private status: any;
   public amendments;
+  private status: any;
 
   constructor(private data: DataService) {
     // This is here as an example
@@ -24,7 +24,6 @@ export class AboutComponent {
   }
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
     this.amendments = [
       {
         count: 'I',

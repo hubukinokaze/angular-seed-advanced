@@ -19,6 +19,5 @@ export class MangaComponent {
   }
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
   }
 }

@@ -3,11 +3,14 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class DataService {
-  public currentStatus: any;
-  private status = new BehaviorSubject<string>('guest');
+  public status;
 
   constructor() {
-    this.currentStatus = this.status.asObservable();
+    this.status = new BehaviorSubject<string>('guest');
+  }
+
+  public getStatus() {
+    return this.status.value;
   }
 
   public changeStatus(newStatus: string) {

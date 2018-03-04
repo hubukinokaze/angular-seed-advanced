@@ -22,7 +22,6 @@ export class ProfileComponent {
   }
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
     this.route.params.subscribe((params) => this.email = params.email);
   }
 

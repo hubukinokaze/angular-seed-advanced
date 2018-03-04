@@ -4,9 +4,11 @@ import { trigger,style,transition,animate,state } from '@angular/animations';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../../services/AuthService';
 
 //lib
 import { DataService } from '../../services/data/data.services';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   moduleId: module.id,
@@ -30,7 +32,7 @@ export class NavbarComponent {
   public navSelect: any[];
   public status: any;
 
-  constructor(public dialog: MdDialog, private data: DataService, public router: Router) {
+  constructor(public dialog: MdDialog, private auth: AuthService, public router: Router, private data: DataService, private cookie: CookieService) {
     this.links = [
       {link: '', name: 'HOME'},
       {link: 'novel', name: 'NOVEL'},
@@ -42,7 +44,6 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
   }
 
   public switcher(i): void {
@@ -53,8 +54,9 @@ export class NavbarComponent {
     let dialogRef = this.dialog.open(LoginComponent, {
       width: '60%'
     });
-    // dialogRef.afterClosed().subscribe(result => {
-    // });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('cookie:', this.cookie.getAll());
+    });
   }
 
   public logout(): void {
@@ -74,24 +76,33 @@ export class NavbarComponent {
 
 export class LoginComponent {
   public hide: any;
-  public email: any;
+  public email: string;
+  public pw: string;
   public emailFormControl: any;
-  public status: any;
+  public pwFormControl: any;
+  public status: string;
 
-  constructor(public dialogRef: MdDialogRef<LoginComponent>, public router: Router, private data: DataService) {
+  constructor(public dialogRef: MdDialogRef<LoginComponent>, public router: Router, private auth: AuthService, private data: DataService, private cookie: CookieService) {
     this.hide = true;
     const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    // six characters or more
+    // and
+    // at least one lowercase and one uppercase alphabetical character
+    // or
+    // at least one lowercase and one numeric character
+    // or
+    // at least one uppercase and one numeric character
+    const PW_REGEX = /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/;
     this.emailFormControl = new FormControl('', [Validators.required, Validators.pattern(EMAIL_REGEX)]);
-  }
-
-  ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
+    this.pwFormControl = new FormControl('', [Validators.required, Validators.pattern(PW_REGEX)]);
   }
 
   public getErrorMessage(): string {
-    return this.emailFormControl.hasError('required') ? 'You must enter a value' :
-      this.emailFormControl.hasError('pattern') ? 'Not a valid email' :
-        '1';
+    return this.emailFormControl.hasError('required') ? '0' :
+      this.emailFormControl.hasError('pattern') ? '0' :
+        this.pwFormControl.hasError('required') ? '0' :
+          this.pwFormControl.hasError('pattern') ? '0' :
+            '1';
   }
 
   public authenticate(): void {
@@ -101,13 +112,19 @@ export class LoginComponent {
   }
 
   public loginBtn(): void {
-    if (this.email === 'admin@gmail.com') {
-      this.data.changeStatus('admin');
-    } else {
-      this.data.changeStatus('member');
-    }
+    (this.email === 'admin@gmail.com') ? this.data.changeStatus('admin') : this.data.changeStatus('member');
+
+    var date = new Date();
+    date.setMonth(date.getMonth() + 1);
+    this.cookie.putObject('status', this.data.getStatus(), {
+      expires: date, domain: document.location.host, path: document.location.pathname, secure: false, httpOnly: false, storeUnencoded: true
+    });
+    this.cookie.putObject('token', this.pw, {
+      expires: date, domain: document.location.host, path: document.location.pathname, secure: false, httpOnly: false, storeUnencoded: true
+    });
 
     this.dialogRef.close();
     this.router.navigateByUrl(`profile/${this.email}`);
   }
+
 }

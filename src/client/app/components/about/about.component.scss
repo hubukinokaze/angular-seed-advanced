@@ -28,6 +28,17 @@ md-list-item.amendment-list {
   padding: 2em 0;
 }
 
+.img-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.hikineetos-life-about {
+  height: 100px;
+  margin: 10px;
+}
+
 @media screen and (min-width: 900px){
   .mat-list-item .mat-line:nth-child(n+2) {
     font-size: 1.1em;

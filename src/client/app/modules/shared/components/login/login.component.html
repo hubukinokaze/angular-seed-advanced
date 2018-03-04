@@ -10,8 +10,14 @@
   </md-form-field>
 
   <md-form-field>
-    <input mdInput placeholder="Password" minlength="6" [type]="hide ? 'password' : 'text'" required>
+    <input mdInput placeholder="Password" minlength="6" [(ngModel)]="pw" [type]="hide ? 'password' : 'text'" [formControl]="pwFormControl" required>
     <md-icon class="visible" mdSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</md-icon>
+    <md-error *ngIf="pwFormControl.hasError('pattern')">
+      Please enter a <strong>valid</strong> password
+    </md-error>
+    <md-error *ngIf="pwFormControl.hasError('required')">
+      Password is <strong>required</strong>
+    </md-error>
   </md-form-field>
 
   <button md-raised-button (click)="authenticate()">Log In</button>

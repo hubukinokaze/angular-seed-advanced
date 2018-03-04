@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieOptionsProvider } from 'ngx-cookie';
 import {
   MdListModule,
   MdIconModule,
@@ -37,7 +38,7 @@ const SHARED_MODULES: any[] = [
   MdFormFieldModule,
   MdInputModule,
   MdSelectModule,
-  MdOptionModule
+  MdOptionModule,
 ];
 
 /**
@@ -67,6 +68,7 @@ const SHARED_MODULES: any[] = [
   ],
   providers: [
     ...SHARED_SERVICES,
+    { provide: CookieOptionsProvider, useValue: {} }
   ]
 })
 export class SharedModule {}

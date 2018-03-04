@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
     this.novelList = [
       {
         icon: 'collections',

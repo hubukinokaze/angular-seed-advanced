@@ -13,6 +13,7 @@
 .toolbar-container {
   display: flex;
   flex-flow: row;
+  align-items: center;
 }
 
 p.slogan {
@@ -58,4 +59,9 @@ button[md-icon-button]:hover {
 
 button[md-menu-item]:hover  {
   background-color: $deckled-edge !important;
+}
+
+.hikineetos-life-banner {
+  height: 30px;
+  padding-right: 10px;
 }

@@ -2,5 +2,6 @@
 <h1 class="title">Art</h1>
 <div class="terms-body">
   <h2 class="detail">Let's start drawing!</h2>
+  <div class="test-template" *ngFor="let art of artList"><img class="clickable" id="{{art.metadata.id}}" style="height: 200px;" src="{{art.link}}"></div>
 </div>
 </body>

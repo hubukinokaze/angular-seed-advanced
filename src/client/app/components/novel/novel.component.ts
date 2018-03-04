@@ -17,7 +17,6 @@ export class NovelComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.currentStatus.subscribe(status => this.status = status);
     this.newName = '';
   }
 
