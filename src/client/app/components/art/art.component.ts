@@ -24,6 +24,7 @@ export class ArtComponent {
 
   public getArt() {
     // if (this.cookie.get('token') !== null)
+    this.artList = [];
     this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
   }
 
