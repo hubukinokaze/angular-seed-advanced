@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/AuthService';
 import { DropboxService } from '../../services/DropboxService';
 import { CookieService } from 'ngx-cookie';
+import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -16,14 +17,13 @@ import { CookieService } from 'ngx-cookie';
 })
 export class ArtComponent {
   public artList: any;
-  private status: any;
 
-  constructor(private dropbox: DropboxService, private cookie: CookieService) {
+  constructor(private dropbox: DropboxService, private cookie: CookieService, private router: Router) {
     this.artList = [];
   }
 
-  ngOnInit() {
-    // if (!this.cookie.get('token'))
+  ngDoCheck() {
+    if (!this.cookie.get('token') && this.router.url.indexOf('art') !== -1)
       this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork');
   }
 
@@ -43,7 +43,6 @@ export class ArtComponent {
 
   private getSingleArtFromDropbox(link) {
     this.dropbox.getArtworkFromDropbox(link).subscribe( (data) => {
-      console.log(data.metadata.path_display.split('/')[2]);
       this.artList.push(data);
     });
   }

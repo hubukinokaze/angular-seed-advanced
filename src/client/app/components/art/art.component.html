@@ -1,7 +1,7 @@
 <body class="default-body">
 <h1 class="title">Art</h1>
 <div class="terms-body">
-  <h2 class="detail">Let's start drawing!</h2>
+  <h2 class="detail" onclick="this.getArtworkFromDropbox('/Hikineetos-Shared-Artwork')">Let's start drawing!</h2>
   <div class="test-template" *ngFor="let art of artList">
     <div>
       <img class="temp-image clickable" id="{{art.metadata.id}}" src="{{art.link}}">
