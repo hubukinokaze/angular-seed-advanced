@@ -54,13 +54,12 @@ export class NavbarComponent {
     let dialogRef = this.dialog.open(LoginComponent, {
       width: '60%'
     });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('cookie:', this.cookie.getAll());
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    // });
   }
 
   public logout(): void {
-    this.data.changeStatus('guest');
+    this.data.setStatus('guest');
     this.router.navigateByUrl('');
   }
 }
@@ -112,10 +111,12 @@ export class LoginComponent {
   }
 
   public loginBtn(): void {
-    (this.email === 'admin@gmail.com') ? this.data.changeStatus('admin') : this.data.changeStatus('member');
+    (this.email === 'admin@gmail.com') ? this.data.setStatus('admin') : this.data.setStatus('member');
 
+    // Cookie will expire in 1 hour
     var date = new Date();
-    date.setMonth(date.getMonth() + 1);
+    date.setHours(date.getHours() + 1);
+
     this.cookie.putObject('status', this.data.getStatus(), {
       expires: date, domain: document.location.host, path: document.location.pathname, secure: false, httpOnly: false, storeUnencoded: true
     });

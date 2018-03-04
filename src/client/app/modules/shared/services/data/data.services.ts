@@ -13,7 +13,7 @@ export class DataService {
     return this.status.value;
   }
 
-  public changeStatus(newStatus: string) {
+  public setStatus(newStatus: string) {
     this.status.next(newStatus);
   }
 }

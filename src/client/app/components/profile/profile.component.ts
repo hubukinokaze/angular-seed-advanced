@@ -26,7 +26,7 @@ export class ProfileComponent {
   }
 
   public logOut() {
-    this.data.changeStatus('guest');
+    this.data.setStatus('guest');
   }
 
 }
