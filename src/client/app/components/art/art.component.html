@@ -1,12 +1,9 @@
 <body class="default-body">
-<h1 class="title">Art</h1>
+<h1 class="title" (click)="getArt()">Art</h1>
 <div class="terms-body">
-  <h2 class="detail" (click)="getArt()">Let's start drawing!</h2>
   <div class="test-template" *ngFor="let art of artList">
-    <div>
-      <img class="temp-image clickable" id="{{art.metadata.id}}" src="{{art.link}}">
-      <div class="temp-author">By {{art.metadata.path_display.split('/')[2]}}</div>
-    </div>
+    <div class="temp-img-container"><img class="temp-image clickable" id="{{art.metadata.id}}" src="{{art.link}}"></div>
+    <div class="temp-author">By {{art.metadata.path_display.split('/')[2]}}</div>
   </div>
 </div>
 </body>
