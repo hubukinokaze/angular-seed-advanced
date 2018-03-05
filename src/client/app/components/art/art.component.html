@@ -4,6 +4,7 @@
   <div class="test-template" *ngFor="let art of artList">
     <div class="temp-img-container"><img class="temp-image clickable" id="{{art.metadata.id}}" src="{{art.link}}"></div>
     <div class="temp-author">By {{art.metadata.path_display.split('/')[2]}}</div>
+    <star-rating-comp [readOnly]="true"  [starType]="'svg'" [rating]="art.metadata.size/1000000" [staticColor]="'ok'" [size]="'medium'" [showHalfStars]="true" [hoverEnabled]="false"></star-rating-comp>
   </div>
 </div>
 </body>

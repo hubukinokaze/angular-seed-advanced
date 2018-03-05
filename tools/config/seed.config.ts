@@ -466,6 +466,7 @@ export class SeedConfig {
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
 
       'ngx-cookie': 'node_modules/ngx-cookie/bundles/ngx-cookie.umd.js',
+      'angular-star-rating': 'node_modules/angular-star-rating/angular-star-rating.umd.js',
 
       'app/*': '/app/*',
       // For test config
@@ -522,6 +523,7 @@ export class SeedConfig {
       'dist/tmp/node_modules/*': 'dist/tmp/node_modules/*',
       'node_modules/*': 'node_modules/*',
       'ngx-cookie': 'node_modules/ngx-cookie/bundles/ngx-cookie.umd.js',
+      'angular-star-rating': 'node_modules/angular-star-rating/angular-star-rating.umd.js',
       '*': 'node_modules/*'
     },
     packages: {

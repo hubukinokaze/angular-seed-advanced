@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieOptionsProvider } from 'ngx-cookie';
+import { StarRatingModule } from 'angular-star-rating';
 import {
   MdListModule,
   MdIconModule,
@@ -15,7 +16,7 @@ import {
   MdFormFieldModule,
   MdInputModule,
   MdSelectModule,
-  MdOptionModule
+  MdOptionModule,
 } from '@angular/material';
 
 // modules
@@ -39,6 +40,7 @@ const SHARED_MODULES: any[] = [
   MdInputModule,
   MdSelectModule,
   MdOptionModule,
+  StarRatingModule,
 ];
 
 /**

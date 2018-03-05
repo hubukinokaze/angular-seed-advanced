@@ -44,6 +44,7 @@ export class ArtComponent {
 
   private getSingleArtFromDropbox(link) {
     this.dropbox.getArtworkFromDropbox(link).subscribe( (data) => {
+      console.log(data);
       this.artList.push(data);
     });
   }

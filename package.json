@@ -173,6 +173,7 @@
     "@angular/platform-server": "^4.4.4",
     "@angular/router": "^4.4.4",
     "@angular/service-worker": "^1.0.0-beta.16",
+    "angular-star-rating": "^3.0.8",
     "angulartics2": "^2.4.0",
     "core-js": "^2.5.1",
     "es-module-loader": "^2.2.8",
